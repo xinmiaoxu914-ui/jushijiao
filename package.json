@@ -1,0 +1,70 @@
+{
+  "name": "taro-vue3-template",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Taro Vue3 Mini-program Template",
+  "templateInfo": {
+    "name": "default",
+    "typescript": false,
+    "css": "Tailwind CSS",
+    "framework": "Vue3"
+  },
+  "scripts": {
+    "dev": "npm run build -- --watch",
+    "build": "taro build --type h5",
+    "upload": "taro build --type h5 && qdmp login && qdmp upload"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "Android >= 4.1",
+    "ios >= 8"
+  ],
+  "author": "",
+  "dependencies": {
+    "@babel/runtime": "^7.24.4",
+    "@tarojs/components": "4.1.5",
+    "@tarojs/helper": "4.1.5",
+    "@tarojs/plugin-framework-vue3": "4.1.5",
+    "@tarojs/plugin-platform-alipay": "4.1.5",
+    "@tarojs/plugin-platform-h5": "4.1.5",
+    "@tarojs/plugin-platform-harmony-hybrid": "4.1.5",
+    "@tarojs/plugin-platform-jd": "4.1.5",
+    "@tarojs/plugin-platform-qq": "4.1.5",
+    "@tarojs/plugin-platform-swan": "4.1.5",
+    "@tarojs/plugin-platform-tt": "4.1.5",
+    "@tarojs/plugin-platform-weapp": "4.1.5",
+    "@tarojs/runtime": "4.1.5",
+    "@tarojs/shared": "4.1.5",
+    "@tarojs/taro": "4.1.5",
+    "vue": "^3.0.0",
+    "lodash": "^4.17.21",
+    "echco-effuse": "^2.1.44",
+    "flyio": "^0.6.14",
+    "vconsole": "^3.15.1"
+  },
+  "devDependencies": {
+    "qdmp-cli": "^0.1.4",
+    "@babel/core": "^7.24.4",
+    "@babel/plugin-transform-class-properties": "7.25.9",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@tarojs/cli": "4.1.5",
+    "@tarojs/plugin-generator": "4.1.5",
+    "@tarojs/vite-runner": "4.1.5",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "autoprefixer": "^10.4.19",
+    "babel-preset-taro": "4.1.5",
+    "eslint": "^8.57.0",
+    "eslint-config-taro": "4.1.5",
+    "eslint-plugin-vue": "^9.17.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "postcss": "^8.4.38",
+    "stylelint": "^16.4.0",
+    "stylelint-config-standard": "^38.0.0",
+    "tailwindcss": "^3.4.3",
+    "terser": "^5.30.4",
+    "vite": "^4.2.0"
+  }
+}

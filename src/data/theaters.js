@@ -1,0 +1,675 @@
+// 座位区段数据生成
+function buildSections(config) {
+  return config.map(s => ({
+    ...s,
+    seats: Array.from({ length: s.rows }, (_, ri) => ({
+      row: String.fromCharCode(65 + ri),
+      rowLabel: String.fromCharCode(65 + ri) + '排',
+      seats: Array.from({ length: s.seatsPerRow }, (_, si) => ({
+        num: si + 1,
+        seatId: `${s.id}_${String.fromCharCode(65 + ri)}_${si + 1}`,
+        photoCount: Math.random() > 0.7 ? Math.floor(Math.random() * 8) + 1 : 0,
+        viewQuality: ['full', 'partial', 'obstructed'][Math.floor(Math.random() * 3)],
+      }))
+    }))
+  }))
+}
+
+export const CITIES = [
+  { id: 'beijing',   name: '北京', icon: '🏯' },
+  { id: 'shanghai',  name: '上海', icon: '🌆' },
+  { id: 'guangzhou', name: '广州', icon: '🌸' },
+  { id: 'shenzhen',  name: '深圳', icon: '🏙️' },
+  { id: 'hangzhou',  name: '杭州', icon: '🌊' },
+  { id: 'suzhou',    name: '苏州', icon: '🪷' },
+]
+
+export const THEATERS = [
+  // ─── 北京 ───
+  {
+    id: 'ncpa_opera', name: '国家大剧院·歌剧院', cityId: 'beijing',
+    cover: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
+    address: '北京市西城区西长安街2号', rating: 4.9, reviewCount: 1286,
+    tags: ['歌剧', '舞剧', '地标'],
+    description: '国家大剧院歌剧院是中国最高规格的表演艺术场所，共设2416个座位，采用品字形舞台，以精湛的声学设计享誉世界。',
+    transport: '地铁1号线天安门西站C出口步行约10分钟', phone: '010-66550000',
+    halls: [{ id: 'h1', name: '歌剧院', capacity: 2416, sections: buildSections([
+      { id: 'A', name: '池座前区', type: 'orchestra', rows: 10, seatsPerRow: 34 },
+      { id: 'B', name: '池座后区', type: 'orchestra', rows: 10, seatsPerRow: 36 },
+      { id: 'C', name: '一层楼座', type: 'mezzanine', rows: 6, seatsPerRow: 38 },
+      { id: 'D', name: '二层楼座', type: 'balcony', rows: 5, seatsPerRow: 42 },
+      { id: 'E', name: '三层楼座', type: 'balcony', rows: 4, seatsPerRow: 44 },
+    ])}],
+  },
+  {
+    id: 'ncpa_theater', name: '国家大剧院·戏剧场', cityId: 'beijing',
+    cover: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80',
+    address: '北京市西城区西长安街2号', rating: 4.8, reviewCount: 896,
+    tags: ['话剧', '戏曲', '小剧场'],
+    description: '戏剧场共1040个座位，是国家大剧院话剧、戏曲演出的核心场所，观众厅亲密感极强。',
+    transport: '地铁1号线天安门西站C出口步行约10分钟', phone: '010-66550000',
+    halls: [{ id: 'h1', name: '戏剧场', capacity: 1040, sections: buildSections([
+      { id: 'A', name: '池座', type: 'orchestra', rows: 15, seatsPerRow: 30 },
+      { id: 'B', name: '楼座', type: 'mezzanine', rows: 6, seatsPerRow: 32 },
+    ])}],
+  },
+  {
+    id: 'tianqiao', name: '天桥艺术中心·大剧场', cityId: 'beijing',
+    cover: 'https://images.unsplash.com/photo-1503095396549-807759245b35?w=800&q=80',
+    address: '北京市西城区天桥南大街天桥演艺区', rating: 4.7, reviewCount: 634,
+    tags: ['音乐剧', '演唱会', '现代剧场'],
+    description: '天桥艺术中心大剧场设有1600座，是北京最重要的音乐剧演出场所之一，配备国际一流舞台技术设备。',
+    transport: '地铁4号线菜市口站步行约8分钟', phone: '010-63581188',
+    halls: [{ id: 'h1', name: '大剧场', capacity: 1600, sections: buildSections([
+      { id: 'A', name: 'A区·池座前排', type: 'orchestra', rows: 8, seatsPerRow: 32 },
+      { id: 'B', name: 'B区·池座后排', type: 'orchestra', rows: 12, seatsPerRow: 34 },
+      { id: 'C', name: 'C区·二楼中区', type: 'mezzanine', rows: 6, seatsPerRow: 36 },
+      { id: 'D', name: 'D区·二楼侧区', type: 'mezzanine', rows: 6, seatsPerRow: 14 },
+    ])}],
+  },
+  {
+    id: 'capital_theater', name: '首都剧场', cityId: 'beijing',
+    cover: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80',
+    address: '北京市东城区王府井大街22号', rating: 4.8, reviewCount: 521,
+    tags: ['话剧', '北京人艺', '经典'],
+    description: '首都剧场1954年建成，是北京人民艺术剧院驻场剧院，中国最具历史底蕴的话剧圣殿，共900余座。',
+    transport: '地铁1号线王府井站A出口步行约10分钟', phone: '010-65250996',
+    halls: [{ id: 'h1', name: '主剧场', capacity: 926, sections: buildSections([
+      { id: 'A', name: '池座', type: 'orchestra', rows: 14, seatsPerRow: 30 },
+      { id: 'B', name: '楼座', type: 'mezzanine', rows: 5, seatsPerRow: 32 },
+    ])}],
+  },
+  // ─── 上海（30个场馆，覆盖大/中/小剧场及演艺新空间）───
+  {
+    id: 'shanghai_theater', name: '上海大剧院·大剧场', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/pic/86d6277f9e2f0708c74a39a0ea24b899a801f2c7',
+    address: '上海市黄浦区人民大道300号', rating: 4.8, reviewCount: 1423,
+    tags: ['歌剧', '芭蕾', '音乐剧'],
+    description: '上海大剧院由法国夏邦杰建筑设计公司设计，屋顶采用两边反翘的白色弧形，是上海标志性文化建筑。大剧场共1842座，分三层看台，观众厅约1000㎡，高19.5m，金色与红色为主色调。',
+    transport: '地铁1/2/8号线人民广场站B出口步行约5分钟', phone: '021-63722426',
+    halls: [{ id: 'h1', name: '大剧场', capacity: 1842, sections: buildSections([
+      { id: 'A', name: '池座前区（1-10排）', type: 'orchestra', rows: 10, seatsPerRow: 36 },
+      { id: 'B', name: '池座后区（11-22排）', type: 'orchestra', rows: 12, seatsPerRow: 38 },
+      { id: 'C', name: '一层楼座', type: 'mezzanine', rows: 6, seatsPerRow: 40 },
+      { id: 'D', name: '二层楼座', type: 'balcony', rows: 5, seatsPerRow: 42 },
+    ])}],
+  },
+  {
+    id: 'shcs', name: '上海文化广场·主剧场', cityId: 'shanghai',
+    cover: 'https://static-pc.shcstheatre.com/webcontent/img/01_maintheatre.jpg',
+    address: '上海市黄浦区永嘉路36号', rating: 4.9, reviewCount: 2156,
+    tags: ['音乐剧', '下沉式剧院', '国内最大'],
+    description: '上海文化广场是国内最大的下沉式专业音乐剧剧场，共1949座。进门即三楼，一楼需下两层。前4排为冲台位（无坡度），5排起坡，二楼设7个带独立卫生间的VIP包厢，三楼"山顶位"提供完整舞台全景。',
+    transport: '地铁1/10/12号线陕西南路站步行约5分钟', phone: '021-64736800',
+    halls: [{ id: 'h1', name: '主剧场', capacity: 1949, sections: buildSections([
+      { id: 'A', name: '一楼冲台位（1-4排）', type: 'orchestra', rows: 4, seatsPerRow: 28, note: '前排无坡度，距舞台最近，适合追星' },
+      { id: 'B', name: '一楼起坡区（5-7排）', type: 'orchestra', rows: 3, seatsPerRow: 32 },
+      { id: 'C', name: '一楼中区（8-20排）', type: 'orchestra', rows: 13, seatsPerRow: 38 },
+      { id: 'D', name: '一楼后区+耳座（21排起）', type: 'orchestra', rows: 6, seatsPerRow: 40 },
+      { id: 'E', name: '二楼VIP包厢（V1-V7）', type: 'box', rows: 4, seatsPerRow: 22, note: '每包厢含独立卫生间' },
+      { id: 'F', name: '三楼山顶位', type: 'balcony', rows: 8, seatsPerRow: 44, note: '上帝视角，票最快售罄' },
+    ])}],
+  },
+  {
+    id: 'meiki', name: '美琪大戏院', cityId: 'shanghai',
+    cover: 'https://dimg04.c-ctrip.com/images/0582r12000b242if430D5.jpg',
+    address: '上海市静安区江宁路66号', rating: 4.8, reviewCount: 987,
+    tags: ['音乐剧', '历史建筑', '2025焕新'],
+    description: '建于1941年，由建筑师范文照设计，取"美轮美奂，琪玉无瑕"之意，曾被称为"远东最新型艺术影宫"。2025年5月完成技术大改造，新建独立钢架体系，吊杆荷载提升至原来1.5-2倍，舞台参数媲美伦敦西区。共约1328座。',
+    transport: '地铁2/7号线静安寺站步行约8分钟', phone: '021-62559550',
+    halls: [{ id: 'h1', name: '主剧场', capacity: 1328, sections: buildSections([
+      { id: 'A', name: '一楼池座前区（A-H排）', type: 'orchestra', rows: 8, seatsPerRow: 38 },
+      { id: 'B', name: '一楼池座后区（I-P排）', type: 'orchestra', rows: 8, seatsPerRow: 40 },
+      { id: 'C', name: '乐池区（可升降）', type: 'orchestra', rows: 3, seatsPerRow: 30, note: '改造后可升降，部分演出为站立乐池票' },
+      { id: 'D', name: '二楼楼座', type: 'mezzanine', rows: 6, seatsPerRow: 42 },
+    ])}],
+  },
+  {
+    id: 'lanxin', name: '兰心大戏院', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/pic/9c16fdfaaf51f3decec09af295eef01f3a297931',
+    address: '上海市黄浦区茂名南路57号', rating: 4.7, reviewCount: 612,
+    tags: ['话剧', '百年剧院', '2022修缮'],
+    description: '建于1930年，是上海最古老的西式剧院。2022年完成历史性修缮，圆穹顶恢复30年代原貌，3D建模精准复原艺术装饰线条。共702座（一楼438座，二楼264座），舞台吊杆负重从220kg提升至500kg。',
+    transport: '地铁1号线陕西南路站步行约8分钟', phone: '021-64170861',
+    halls: [{ id: 'h1', name: '主剧场', capacity: 702, sections: buildSections([
+      { id: 'A', name: '一楼池座（A-P排）', type: 'orchestra', rows: 16, seatsPerRow: 28 },
+      { id: 'B', name: '二楼楼座', type: 'mezzanine', rows: 8, seatsPerRow: 33 },
+    ])}],
+  },
+  {
+    id: 'shangju', name: '上剧场', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/pic/1b4c510fd9f9d72a3b4dcc9cdf2a2834349bbb02',
+    address: '上海市徐汇区肇嘉浜路1111号美罗城5楼', rating: 4.8, reviewCount: 923,
+    tags: ['话剧', '赖声川', '美罗城5楼'],
+    description: '赖声川亲自设计，位于美罗城商场5楼，全场699座。阶梯状观众席整体高于舞台，第一排不必仰头，视野极佳。设有"情侣座"（座位间无横杠），台口与地面仅0.69m高差，近距离感极强。',
+    transport: '地铁1/4号线上海体育馆站，进入美罗城乘扶梯至5楼', phone: '021-64265757',
+    halls: [{ id: 'h1', name: '主剧场', capacity: 699, sections: buildSections([
+      { id: 'A', name: '前区（1-6排）', type: 'orchestra', rows: 6, seatsPerRow: 34 },
+      { id: 'B', name: '中区（7-13排）', type: 'orchestra', rows: 7, seatsPerRow: 36 },
+      { id: 'C', name: '后区（14-18排）', type: 'orchestra', rows: 5, seatsPerRow: 38 },
+    ])}],
+  },
+  // 上海中型剧场
+  {
+    id: 'sh_dongfang', name: '上海东方艺术中心·歌剧厅', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/smart/902397dda144ad3487f43b3dd6a20cf430ad85c5-bkimg-process,v_1,rw_378,rh_252,maxl_756',
+    address: '上海市浦东新区丁香路425号', rating: 4.7, reviewCount: 743,
+    tags: ['音乐剧', '歌剧', '浦东地标'],
+    description: '东方艺术中心由法国建筑师保罗·安德鲁设计，外形酷似盛开的蝴蝶兰。歌剧厅共1020座，赖声川《如梦之梦》《暗恋桃花源》均在此演出。',
+    transport: '地铁6号线东方艺术中心站步行约3分钟', phone: '021-38466666',
+    halls: [{ id: 'h1', name: '歌剧厅', capacity: 1020, sections: buildSections([
+      { id: 'A', name: '池座前区（1-10排）', type: 'orchestra', rows: 10, seatsPerRow: 32 },
+      { id: 'B', name: '池座后区（11-20排）', type: 'orchestra', rows: 10, seatsPerRow: 34 },
+      { id: 'C', name: '楼座', type: 'mezzanine', rows: 5, seatsPerRow: 36 },
+    ])}],
+  },
+  {
+    id: 'sh_renmin', name: '人民大舞台', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/pic/2934349b033b5bb5f29819a439d3d539b600bc18',
+    address: '上海市黄浦区湖北路663号', rating: 4.5, reviewCount: 421,
+    tags: ['话剧', '戏曲', '百年老戏院'],
+    description: '人民大舞台是上海的百年剧院，2011年翻修重开后成为热门话剧场所，共1006座。历史底蕴深厚，见证了上海演艺百年变迁。',
+    transport: '地铁10号线天潼路站步行约8分钟', phone: '021-63225294',
+    halls: [{ id: 'h1', name: '主剧场', capacity: 1006, sections: buildSections([
+      { id: 'A', name: '池座前区', type: 'orchestra', rows: 12, seatsPerRow: 32 },
+      { id: 'B', name: '池座后区', type: 'orchestra', rows: 10, seatsPerRow: 34 },
+      { id: 'C', name: '楼座', type: 'mezzanine', rows: 5, seatsPerRow: 36 },
+    ])}],
+  },
+  {
+    id: 'sh_yihai', name: '艺海剧院·大剧场', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/pic/0e2442a7d933c895d143d76c864864f082025aafaa2b',
+    address: '上海市长宁区天山路41号', rating: 4.6, reviewCount: 512,
+    tags: ['话剧', '孟京辉驻演', '商业剧场'],
+    description: '艺海剧院共设大小两个剧场，大剧场999座。孟京辉将5楼小剧场长租为驻演剧院，每年逾200场演出，是上海商业话剧最活跃的场所之一。',
+    transport: '地铁2/10号线中山公园站步行约10分钟', phone: '021-52523600',
+    halls: [
+      { id: 'h1', name: '大剧场', capacity: 999, sections: buildSections([
+        { id: 'A', name: '池座', type: 'orchestra', rows: 18, seatsPerRow: 32 },
+        { id: 'B', name: '楼座', type: 'mezzanine', rows: 5, seatsPerRow: 34 },
+      ])},
+      { id: 'h2', name: '孟京辉小剧场（5F）', capacity: 328, sections: buildSections([
+        { id: 'A', name: '观众席', type: 'orchestra', rows: 12, seatsPerRow: 28 },
+      ])},
+    ],
+  },
+  {
+    id: 'sh_beiwaitan', name: '北外滩友邦大剧院', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/pic/024f78f0f736afc379315c293a4efcc4b74543a9b47a',
+    address: '上海市虹口区东大名路889号来福士广场', rating: 4.8, reviewCount: 634,
+    tags: ['音乐剧', '北外滩', '新地标'],
+    description: '2023年开业的上海演艺新地标，2025年演出季引进《日落大道》《指环王》等重磅音乐剧，年演出超64场。与北外滩来福士商业综合体无缝连接。',
+    transport: '地铁12号线国际客运中心站步行约5分钟', phone: '021-65390777',
+    halls: [{ id: 'h1', name: '大剧场', capacity: 1200, sections: buildSections([
+      { id: 'A', name: '池座前区', type: 'orchestra', rows: 8, seatsPerRow: 32 },
+      { id: 'B', name: '池座后区', type: 'orchestra', rows: 10, seatsPerRow: 34 },
+      { id: 'C', name: '一层楼座', type: 'mezzanine', rows: 5, seatsPerRow: 36 },
+      { id: 'D', name: '二层楼座', type: 'balcony', rows: 4, seatsPerRow: 38 },
+    ])}],
+  },
+  {
+    id: 'sh_shuyuanlu', name: '上海音乐学院·上音歌剧院', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/pic/d009b3de9c82d158ccbfafac4c500ed8bc3eb135e421',
+    address: '上海市徐汇区汾阳路20号', rating: 4.8, reviewCount: 389,
+    tags: ['歌剧', '古典乐', '上音附属'],
+    description: '上海音乐学院旗下国际级歌剧院，声学设计达国际顶尖水准，是近年上海歌剧和精品音乐剧的重要演出场所，常吸引世界级演出团体。',
+    transport: '地铁1号线陕西南路站步行约10分钟', phone: '021-64703000',
+    halls: [{ id: 'h1', name: '歌剧院', capacity: 1400, sections: buildSections([
+      { id: 'A', name: '池座前区（1-10排）', type: 'orchestra', rows: 10, seatsPerRow: 32 },
+      { id: 'B', name: '池座后区（11-20排）', type: 'orchestra', rows: 10, seatsPerRow: 34 },
+      { id: 'C', name: '一层楼座', type: 'mezzanine', rows: 5, seatsPerRow: 36 },
+      { id: 'D', name: '二层楼座', type: 'balcony', rows: 4, seatsPerRow: 38 },
+    ])}],
+  },
+  {
+    id: 'sh_poly', name: '上海保利大剧院', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/pic/80cb39dbb6fd5266d0162d72344e802bd40735fa9805',
+    address: '上海市嘉定区白银路159号', rating: 4.7, reviewCount: 478,
+    tags: ['歌剧', '音乐会', '水景剧场'],
+    description: '国内首家拥有水景剧场的剧院，总建筑面积5.6万平方米。大剧场1466座，另有400座小剧场及屋顶剧场，毗邻F1赛道，交通独特。',
+    transport: '地铁11号线嘉定新城站，转公交或打车约15分钟', phone: '021-39552345',
+    halls: [
+      { id: 'h1', name: '大剧场', capacity: 1466, sections: buildSections([
+        { id: 'A', name: '池座前区', type: 'orchestra', rows: 10, seatsPerRow: 34 },
+        { id: 'B', name: '池座后区', type: 'orchestra', rows: 10, seatsPerRow: 36 },
+        { id: 'C', name: '楼座', type: 'mezzanine', rows: 5, seatsPerRow: 38 },
+      ])},
+      { id: 'h2', name: '小剧场', capacity: 400, sections: buildSections([
+        { id: 'A', name: '观众席', type: 'orchestra', rows: 14, seatsPerRow: 28 },
+      ])},
+    ],
+  },
+  {
+    id: 'sh_qianjiao', name: '交通银行前滩31演艺中心·大剧场', cityId: 'shanghai',
+    cover: 'https://dimg04.c-ctrip.com/images/0104s120009ignyt10400.jpg',
+    address: '上海市浦东新区高青西路777号', rating: 4.7, reviewCount: 356,
+    tags: ['音乐剧', '浦东新地标', '前滩'],
+    description: '前滩31演艺中心是上海浦东又一重要演艺地标，位于前滩国际商务区，交通便利，近年引进多部优质音乐剧和话剧演出。',
+    transport: '地铁6/8号线东方体育中心站步行约15分钟', phone: '021-38975588',
+    halls: [{ id: 'h1', name: '大剧场', capacity: 1200, sections: buildSections([
+      { id: 'A', name: '池座前区', type: 'orchestra', rows: 10, seatsPerRow: 32 },
+      { id: 'B', name: '池座后区', type: 'orchestra', rows: 10, seatsPerRow: 34 },
+      { id: 'C', name: '楼座', type: 'mezzanine', rows: 5, seatsPerRow: 36 },
+    ])}],
+  },
+  {
+    id: 'sh_wanping', name: '宛平剧院', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/smart/b8014a90f603738da977d34ab047a751f8198618461c-bkimg-process,v_1,rw_286,rh_252,maxl_573',
+    address: '上海市徐汇区宛平南路99号', rating: 4.6, reviewCount: 298,
+    tags: ['戏曲', '话剧', '徐汇'],
+    description: '宛平剧院与长江剧场同属上海大型综合性演出场所，2025演出季联合推出180台480场演出，横跨戏曲、曲艺、舞剧、话剧、脱口秀等多品类。',
+    transport: '地铁1号线漕宝路站步行约10分钟', phone: '021-64656787',
+    halls: [{ id: 'h1', name: '主剧场', capacity: 800, sections: buildSections([
+      { id: 'A', name: '池座', type: 'orchestra', rows: 16, seatsPerRow: 28 },
+      { id: 'B', name: '楼座', type: 'mezzanine', rows: 5, seatsPerRow: 30 },
+    ])}],
+  },
+  {
+    id: 'sh_changjiang', name: '长江剧场', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/pic/7acb0a46f21fbe0941ebfa4e64600c338744ad36',
+    address: '上海市静安区长江路407号', rating: 4.6, reviewCount: 267,
+    tags: ['戏曲', '曲艺', '2025焕新'],
+    description: '长江剧场2025年完成升级改造，与宛平剧院共推"幕起生花"演出季，是上海传统戏曲和曲艺的重要演出场所，同时拥抱脱口秀等新兴演出形式。',
+    transport: '地铁1号线汉中路站步行约8分钟', phone: '021-36306888',
+    halls: [{ id: 'h1', name: '主剧场', capacity: 900, sections: buildSections([
+      { id: 'A', name: '池座', type: 'orchestra', rows: 17, seatsPerRow: 30 },
+      { id: 'B', name: '楼座', type: 'mezzanine', rows: 5, seatsPerRow: 32 },
+    ])}],
+  },
+  {
+    id: 'sh_jiuketree', name: '九棵树（上海）未来艺术中心', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/smart/bd315c6034a85edf68e8624146540923dd547568-bkimg-process,v_1,rw_341,rh_252,maxl_683',
+    address: '上海市奉贤区望园路1158号', rating: 4.6, reviewCount: 198,
+    tags: ['综合演出', '奉贤', '文旅目的地'],
+    description: '九棵树未来艺术中心是上海南部重要的演艺综合体，与上海杂技团等"国家队"深度联动，以高频演出打造文旅打卡目的地，含大剧场、中剧场和多功能空间。',
+    transport: '地铁5号线奉贤新城站，转接驳巴士约15分钟', phone: '021-34118888',
+    halls: [{ id: 'h1', name: '大剧场', capacity: 1200, sections: buildSections([
+      { id: 'A', name: '池座前区', type: 'orchestra', rows: 10, seatsPerRow: 32 },
+      { id: 'B', name: '池座后区', type: 'orchestra', rows: 10, seatsPerRow: 34 },
+      { id: 'C', name: '楼座', type: 'mezzanine', rows: 5, seatsPerRow: 36 },
+    ])}],
+  },
+  // 上海话剧/小剧场
+  {
+    id: 'sh_huaju_art', name: '上海话剧艺术中心·艺术剧院', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/smart/f31fbe096b63f62481125bbb8144ebf81a4ca33f-bkimg-process,v_1,rw_644,rh_500,maxl_800',
+    address: '上海市徐汇区安福路288号', rating: 4.8, reviewCount: 1124,
+    tags: ['话剧', '安福路', '精品剧场'],
+    description: '上海话剧艺术中心是全国最重要的话剧制作与演出机构之一。安福路大楼内设三个剧场：1F艺术剧院530座，3楼和6楼各有小剧场200-300座，全年演出超400场。',
+    transport: '地铁1号线常熟路站步行约5分钟', phone: '021-64733500',
+    halls: [
+      { id: 'h1', name: '艺术剧院（1F）', capacity: 530, sections: buildSections([
+        { id: 'A', name: '池座前区', type: 'orchestra', rows: 10, seatsPerRow: 26 },
+        { id: 'B', name: '池座后区', type: 'orchestra', rows: 10, seatsPerRow: 28 },
+      ])},
+      { id: 'h2', name: 'D6空间（6F小剧场）', capacity: 256, sections: buildSections([
+        { id: 'A', name: '观众席', type: 'orchestra', rows: 10, seatsPerRow: 26 },
+      ])},
+    ],
+  },
+  {
+    id: 'sh_huangpu', name: '黄浦剧场', cityId: 'shanghai',
+    cover: 'https://dimg04.c-ctrip.com/images/1mh5m12000nqliki2DF9B.jpg',
+    address: '上海市黄浦区北京东路663号', rating: 4.5, reviewCount: 312,
+    tags: ['话剧', '黑匣子', '实验戏剧'],
+    description: '黄浦剧场内设中剧场与黑匣子剧场两个演出空间，中剧场上演话剧，黑匣子剧场专注实验/非职业戏剧，是上海话剧生态的重要组成部分。',
+    transport: '地铁10号线天潼路站步行约5分钟', phone: '021-63212422',
+    halls: [
+      { id: 'h1', name: '中剧场', capacity: 400, sections: buildSections([
+        { id: 'A', name: '观众席', type: 'orchestra', rows: 16, seatsPerRow: 25 },
+      ])},
+      { id: 'h2', name: '黑匣子剧场', capacity: 150, sections: buildSections([
+        { id: 'A', name: '灵活观众区', type: 'orchestra', rows: 8, seatsPerRow: 18 },
+      ])},
+    ],
+  },
+  {
+    id: 'sh_1933', name: '1933老场坊·空中剧院', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/pic/dbb44aed2e738bd4d9671a4fab8b87d6277ff90e',
+    address: '上海市虹口区溧阳路611号', rating: 4.7, reviewCount: 445,
+    tags: ['实验戏剧', '历史建筑', '工业风'],
+    description: '1933老场坊是由1933年建成的工部局宰牲场改造而成的创意空间，4楼空中剧院共531座，建筑本身即是艺术品，极具沉浸感，常举办先锋/实验演出。',
+    transport: '地铁4/12号线海伦路站步行约10分钟', phone: '021-61500000',
+    halls: [{ id: 'h1', name: '空中剧院（4F）', capacity: 531, sections: buildSections([
+      { id: 'A', name: '观众席', type: 'orchestra', rows: 18, seatsPerRow: 30 },
+    ])}],
+  },
+  {
+    id: 'sh_dance', name: '上海舞蹈中心·大剧场', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/smart/cf1b9d16fdfaaf51635a4ca0845494eef01f7a70-bkimg-process,v_1,rw_447,rh_252,maxl_895',
+    address: '上海市长宁区虹桥路1650号', rating: 4.8, reviewCount: 367,
+    tags: ['舞蹈', '芭蕾', '现代舞'],
+    description: '上海舞蹈中心是为舞蹈表演量身定制的专业场所，大小两个剧场。大剧场约600座，凭借精准的舞台设计和亲密的观演关系，是国内外顶级舞蹈团体的首选演出地。',
+    transport: '地铁10号线伊犁路站步行约8分钟', phone: '021-62524462',
+    halls: [{ id: 'h1', name: '大剧场', capacity: 600, sections: buildSections([
+      { id: 'A', name: '池座前区', type: 'orchestra', rows: 10, seatsPerRow: 28 },
+      { id: 'B', name: '池座后区', type: 'orchestra', rows: 10, seatsPerRow: 30 },
+    ])}],
+  },
+  // 演艺新空间 / 沉浸式剧场
+  {
+    id: 'sh_asia_star', name: '亚洲大厦·Star Theatre', cityId: 'shanghai',
+    cover: 'https://inews.gtimg.com/news_bt/OpG7ScGQ8oQVPaRZTgqnBlM0I0wUmiTbKrFulI2a9AOVEAA/641',
+    address: '上海市静安区南京西路1600号亚洲大厦', rating: 4.7, reviewCount: 892,
+    tags: ['沉浸式', '驻演小剧场', '音乐剧'],
+    description: '亚洲大厦是全国演艺新空间的标杆性范本，楼内设有多个小剧场同步驻演，《阿波罗尼亚》是中国首个环境式驻演小剧场音乐剧，每日多场，成为上海独特的演艺地标。',
+    transport: '地铁2/7/14号线静安寺站步行约3分钟', phone: '021-62880888',
+    halls: [
+      { id: 'h1', name: '阿波罗尼亚驻演厅', capacity: 200, sections: buildSections([
+        { id: 'A', name: '沉浸式观演区', type: 'orchestra', rows: 8, seatsPerRow: 25 },
+      ])},
+      { id: 'h2', name: '其他驻演厅', capacity: 180, sections: buildSections([
+        { id: 'A', name: '观演区', type: 'orchestra', rows: 7, seatsPerRow: 26 },
+      ])},
+    ],
+  },
+  {
+    id: 'sh_jiucheng', name: '久事·上海商城剧院', cityId: 'shanghai',
+    cover: 'https://dimg04.c-ctrip.com/images/1mh4p12000nqlsspeF4E8.jpg',
+    address: '上海市静安区南京西路1376号4楼', rating: 4.6, reviewCount: 234,
+    tags: ['话剧', '音乐剧', '国际氛围'],
+    description: '久事上海商城剧院位于南京西路商圈，是一个拥有400余座的中型剧场，曾是上海最早接轨国际演出的场所之一，常有国际驻演剧目上演。',
+    transport: '地铁2/7号线静安寺站步行约5分钟', phone: '021-62798600',
+    halls: [{ id: 'h1', name: '主剧场', capacity: 450, sections: buildSections([
+      { id: 'A', name: '池座', type: 'orchestra', rows: 16, seatsPerRow: 28 },
+    ])}],
+  },
+  {
+    id: 'sh_tianchang', name: '天蟾逸夫舞台', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/pic/1b4c510fd9f9d72a6059c15286713f34349b033b0d72',
+    address: '上海市黄浦区福州路701号', rating: 4.6, reviewCount: 456,
+    tags: ['京剧', '昆曲', '百年剧院'],
+    description: '天蟾逸夫舞台是上海历史最悠久的戏曲剧场之一，共约1200座，是上海京剧、昆曲等传统戏曲的核心演出场所，梅兰芳等大师都曾在此登台。',
+    transport: '地铁1/2/8号线人民广场站步行约10分钟', phone: '021-63513939',
+    halls: [{ id: 'h1', name: '主剧场', capacity: 1200, sections: buildSections([
+      { id: 'A', name: '池座前区', type: 'orchestra', rows: 12, seatsPerRow: 36 },
+      { id: 'B', name: '池座后区', type: 'orchestra', rows: 10, seatsPerRow: 38 },
+      { id: 'C', name: '楼座', type: 'mezzanine', rows: 5, seatsPerRow: 40 },
+    ])}],
+  },
+  {
+    id: 'sh_shanghai_da', name: '上海大剧院·中剧场', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/pic/86d6277f9e2f0708c74a39a0ea24b899a801f2c7',
+    address: '上海市黄浦区人民大道300号', rating: 4.7, reviewCount: 398,
+    tags: ['戏曲', '室内乐', '中型演出'],
+    description: '上海大剧院中剧场约550座，与大剧场共处一楼，主要上演地方戏曲、室内乐和中小型话剧。精致的空间感令演员与观众关系更为亲密。',
+    transport: '地铁1/2/8号线人民广场站B出口步行约5分钟', phone: '021-63722426',
+    halls: [{ id: 'h1', name: '中剧场', capacity: 550, sections: buildSections([
+      { id: 'A', name: '池座前区', type: 'orchestra', rows: 10, seatsPerRow: 26 },
+      { id: 'B', name: '池座后区', type: 'orchestra', rows: 10, seatsPerRow: 28 },
+    ])}],
+  },
+  // 上海更多中大型剧场
+  {
+    id: 'sh_music_hall', name: '凯迪拉克·上海音乐厅', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/smart/9a1151c2c1dad878e4dd3b22-bkimg-process,v_1,rw_1600,rh_1009,maxl_800',
+    address: '上海市黄浦区延安东路523号', rating: 4.8, reviewCount: 567,
+    tags: ['古典乐', '室内乐', '历史建筑'],
+    description: '1930年建成，2004年整体平移66.46米并修缮，是上海现存最古老的现代建筑之一。共1185座，以精湛的自然混响著称，是上海古典音乐演出最重要的圣地。',
+    transport: '地铁1/2/8号线人民广场站步行约8分钟', phone: '021-63864477',
+    halls: [{ id: 'h1', name: '大厅', capacity: 1185, sections: buildSections([
+      { id: 'A', name: '池座前区（1-10排）', type: 'orchestra', rows: 10, seatsPerRow: 32 },
+      { id: 'B', name: '池座后区（11-22排）', type: 'orchestra', rows: 12, seatsPerRow: 34 },
+      { id: 'C', name: '楼座', type: 'mezzanine', rows: 5, seatsPerRow: 36 },
+    ])}],
+  },
+  {
+    id: 'sh_yifu', name: '上海逸夫舞台', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/pic/b219ebc4b74543a98226f21817094f36acaf9958',
+    address: '上海市黄浦区汉口路439号', rating: 4.7, reviewCount: 412,
+    tags: ['京剧', '昆曲', '经典戏曲'],
+    description: '1995年开放，共1024座，是上海京剧团、上海昆剧团的重要驻场演出地，多次荣获"上海市民最喜爱的演出场所"称号，与天蟾逸夫舞台并称上海戏曲双雄。',
+    transport: '地铁1/2/8号线人民广场站步行约10分钟', phone: '021-63511806',
+    halls: [{ id: 'h1', name: '主剧场', capacity: 1024, sections: buildSections([
+      { id: 'A', name: '池座前区', type: 'orchestra', rows: 12, seatsPerRow: 30 },
+      { id: 'B', name: '池座后区', type: 'orchestra', rows: 10, seatsPerRow: 32 },
+      { id: 'C', name: '楼座', type: 'mezzanine', rows: 5, seatsPerRow: 34 },
+    ])}],
+  },
+  {
+    id: 'sh_daning', name: '大宁剧院·大剧场', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/smart/71cf3bc79f3df8dcbc45ef2ccd11728b47102816-bkimg-process,v_1,rw_600,rh_400,maxl_800',
+    address: '上海市静安区共和新路1188号', rating: 4.6, reviewCount: 389,
+    tags: ['话剧', '音乐剧', '静安'],
+    description: '大宁剧院大剧场1009座，是上海北部最活跃的商业演出场所，年演出超300场，毗邻大宁灵石公园，停车便捷。',
+    transport: '地铁1号线延长路站步行约10分钟', phone: '021-56622998',
+    halls: [{ id: 'h1', name: '大剧场', capacity: 1009, sections: buildSections([
+      { id: 'A', name: '池座前区', type: 'orchestra', rows: 10, seatsPerRow: 28 },
+      { id: 'B', name: '池座后区', type: 'orchestra', rows: 12, seatsPerRow: 30 },
+      { id: 'C', name: '楼座', type: 'mezzanine', rows: 5, seatsPerRow: 32 },
+    ])}],
+  },
+  {
+    id: 'sh_gongwutai', name: '共舞台', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/pic/d1160924ab18972b6811111ae6cd7b899e510a32',
+    address: '上海市虹口区四川北路1250号', rating: 4.5, reviewCount: 276,
+    tags: ['话剧', '百年剧院', '虹口'],
+    description: '始建于1927年，见证上海演艺产业百年变迁。修缮后保留老戏院风貌，约800座。2023年起引进大量话剧、脱口秀演出，成为虹口区重要文化地标。',
+    transport: '地铁10号线四川北路站步行约5分钟', phone: '021-65415588',
+    halls: [{ id: 'h1', name: '主剧场', capacity: 800, sections: buildSections([
+      { id: 'A', name: '池座', type: 'orchestra', rows: 16, seatsPerRow: 28 },
+      { id: 'B', name: '楼座', type: 'mezzanine', rows: 5, seatsPerRow: 30 },
+    ])}],
+  },
+  {
+    id: 'sh_hongqiao_art', name: '虹桥艺术中心·大剧场', cityId: 'shanghai',
+    cover: 'https://dimg04.c-ctrip.com/images/1mh5r12000c4wl1lo0A6E.jpg',
+    address: '上海市闵行区申贵路555号', rating: 4.6, reviewCount: 234,
+    tags: ['综合演出', '闵行', '家庭亲子'],
+    description: '虹桥艺术中心含大中小三个剧场，大剧场1400座，常举办儿童剧、综艺演出及中型商业话剧，是上海西南区域重要的演出目的地，交通紧邻虹桥枢纽。',
+    transport: '地铁2/10/17号线虹桥火车站步行约15分钟', phone: '021-22329899',
+    halls: [{ id: 'h1', name: '大剧场', capacity: 1400, sections: buildSections([
+      { id: 'A', name: '池座前区', type: 'orchestra', rows: 10, seatsPerRow: 34 },
+      { id: 'B', name: '池座后区', type: 'orchestra', rows: 10, seatsPerRow: 36 },
+      { id: 'C', name: '楼座', type: 'mezzanine', rows: 5, seatsPerRow: 38 },
+    ])}],
+  },
+  {
+    id: 'sh_dongfang_music', name: '上海东方艺术中心·音乐厅', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/smart/d50735fae6cd7b89c92f8839092442a7d8330ecc-bkimg-process,v_1,rw_1280,rh_852,maxl_800',
+    address: '上海市浦东新区丁香路425号', rating: 4.8, reviewCount: 523,
+    tags: ['交响乐', '室内乐', '葡萄园式'],
+    description: '东方艺术中心音乐厅共1954座，采用葡萄园式座位排列，观众360度环绕舞台，声学效果极为出色。与歌剧厅并称，是上海顶级交响乐演出的首要场地。',
+    transport: '地铁6号线东方艺术中心站步行约3分钟', phone: '021-38466666',
+    halls: [{ id: 'h1', name: '音乐厅', capacity: 1954, sections: buildSections([
+      { id: 'A', name: '主席台正面区', type: 'orchestra', rows: 14, seatsPerRow: 32 },
+      { id: 'B', name: '舞台左侧区', type: 'orchestra', rows: 8, seatsPerRow: 16 },
+      { id: 'C', name: '舞台右侧区', type: 'orchestra', rows: 8, seatsPerRow: 16 },
+      { id: 'D', name: '楼座后区', type: 'mezzanine', rows: 8, seatsPerRow: 40 },
+    ])}],
+  },
+  {
+    id: 'sh_intl_dance', name: '上海国际舞蹈中心·大剧场', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/smart/3c6d55fbb2fb4316698f646428a4462309f7d31f-bkimg-process,v_1,rw_447,rh_252,maxl_895',
+    address: '上海市长宁区虹桥路1650号', rating: 4.7, reviewCount: 289,
+    tags: ['舞蹈', '现代舞', '国际演出'],
+    description: '上海国际舞蹈中心与上海舞蹈中心相邻，是全国规模最大、功能最完备的专业舞蹈场馆之一。大剧场1200座，小剧场300座，是顶级国际舞蹈团体的首选演出地。',
+    transport: '地铁10号线伊犁路站步行约8分钟', phone: '021-62524343',
+    halls: [{ id: 'h1', name: '大剧场', capacity: 1200, sections: buildSections([
+      { id: 'A', name: '池座前区', type: 'orchestra', rows: 10, seatsPerRow: 30 },
+      { id: 'B', name: '池座后区', type: 'orchestra', rows: 10, seatsPerRow: 32 },
+      { id: 'C', name: '楼座', type: 'mezzanine', rows: 5, seatsPerRow: 34 },
+    ])}],
+  },
+  {
+    id: 'sh_capa', name: '上海儿童艺术剧场（CAPA）', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/smart/8326cffc1e178a82e35cef8ff503738da977e8b9-bkimg-process,v_1,rw_395,rh_252,maxl_790',
+    address: '上海市嘉定区菊园新区博乐路701号', rating: 4.8, reviewCount: 312,
+    tags: ['儿童剧', '亲子', '嘉定'],
+    description: '国内最具影响力的专业儿童剧场之一，共600余座，以引进顶级国际儿童剧和自制精品剧闻名，是亲子观演的首选目的地，每年举办"国际儿童戏剧节"。',
+    transport: '地铁11号线嘉定北站步行约20分钟或打车约10分钟', phone: '021-59521989',
+    halls: [{ id: 'h1', name: '主剧场', capacity: 600, sections: buildSections([
+      { id: 'A', name: '池座前区', type: 'orchestra', rows: 10, seatsPerRow: 28 },
+      { id: 'B', name: '池座后区', type: 'orchestra', rows: 10, seatsPerRow: 30 },
+    ])}],
+  },
+  {
+    id: 'sh_poly_songjiang', name: '松江保利大剧院', cityId: 'shanghai',
+    cover: 'https://dimg04.c-ctrip.com/images/1mh4s12000c4wkexl8D98.jpg',
+    address: '上海市松江区新松江路888号', rating: 4.5, reviewCount: 156,
+    tags: ['综合演出', '松江', '郊区场馆'],
+    description: '2023年开业，约1400座，是上海西南郊区规模最大的剧场，引进多部优质演出巡演，是松江、青浦居民的重要文化消费目的地。',
+    transport: '地铁9号线松江新城站步行约15分钟', phone: '021-57810888',
+    halls: [{ id: 'h1', name: '主剧场', capacity: 1400, sections: buildSections([
+      { id: 'A', name: '池座前区', type: 'orchestra', rows: 10, seatsPerRow: 34 },
+      { id: 'B', name: '池座后区', type: 'orchestra', rows: 10, seatsPerRow: 36 },
+      { id: 'C', name: '楼座', type: 'mezzanine', rows: 5, seatsPerRow: 38 },
+    ])}],
+  },
+  {
+    id: 'sh_shtx', name: '上海戏剧学院·端钧剧场', cityId: 'shanghai',
+    cover: 'https://bkimg.cdn.bcebos.com/pic/f9dcd100baa1cd11728bba6208b30f2443a70f56',
+    address: '上海市静安区华山路630号', rating: 4.7, reviewCount: 334,
+    tags: ['话剧', '学院派', '实验戏剧'],
+    description: '上海戏剧学院端钧剧场是上戏的旗舰演出空间，约440座，汇集全国最优秀的戏剧学院演出和实验先锋剧目。上戏还设有实验剧场（200座）和黑匣子剧场（100座）。',
+    transport: '地铁2/7号线静安寺站步行约8分钟', phone: '021-62481929',
+    halls: [
+      { id: 'h1', name: '端钧剧场', capacity: 440, sections: buildSections([
+        { id: 'A', name: '池座', type: 'orchestra', rows: 16, seatsPerRow: 26 },
+        { id: 'B', name: '楼座', type: 'mezzanine', rows: 3, seatsPerRow: 28 },
+      ])},
+      { id: 'h2', name: '实验剧场', capacity: 200, sections: buildSections([
+        { id: 'A', name: '观众席', type: 'orchestra', rows: 10, seatsPerRow: 20 },
+      ])},
+    ],
+  },
+  {
+    id: 'sh_xintiandi_art', name: '新天地·上海壹号美术馆剧场', cityId: 'shanghai',
+    cover: 'https://inews.gtimg.com/news_bt/O_OHkrtXWbO5CZ3WVP0TIgS1PfvJp5eMCcL6dHawIAAA/641',
+    address: '上海市黄浦区太仓路181弄', rating: 4.6, reviewCount: 189,
+    tags: ['沉浸式', '新天地', '艺术空间'],
+    description: '位于新天地石库门建筑群内的演艺新空间，由历史建筑改造而成。融合艺术展览与戏剧演出，常驻沉浸式戏剧和环境式音乐剧，是上海最具格调的演艺目的地之一。',
+    transport: '地铁1/10/12号线陕西南路站步行约5分钟', phone: '021-33077788',
+    halls: [{ id: 'h1', name: '剧场空间', capacity: 250, sections: buildSections([
+      { id: 'A', name: '沉浸式观演区', type: 'orchestra', rows: 8, seatsPerRow: 32 },
+    ])}],
+  },
+  {
+    id: 'sh_xuhui_theater', name: '徐汇艺术馆·大剧场', cityId: 'shanghai',
+    cover: 'https://dimg04.c-ctrip.com/images/1mh4p12000c4wiqkb4BFD.jpg',
+    address: '上海市徐汇区漕溪北路595号', rating: 4.5, reviewCount: 178,
+    tags: ['话剧', '音乐会', '徐汇'],
+    description: '徐汇艺术馆大剧场约800座，是徐汇区重要的综合性演出场所，常举办中型话剧、音乐会及地方戏曲演出，毗邻上海体育馆，交通便利。',
+    transport: '地铁1/4号线上海体育馆站步行约8分钟', phone: '021-64261333',
+    halls: [{ id: 'h1', name: '大剧场', capacity: 800, sections: buildSections([
+      { id: 'A', name: '池座', type: 'orchestra', rows: 16, seatsPerRow: 28 },
+      { id: 'B', name: '楼座', type: 'mezzanine', rows: 5, seatsPerRow: 30 },
+    ])}],
+  },
+  // ─── 广州 ───
+  {
+    id: 'gz_opera', name: '广州大剧院·歌剧厅', cityId: 'guangzhou',
+    cover: 'https://images.unsplash.com/photo-1534430480872-3498386e7856?w=800&q=80',
+    address: '广州市天河区珠江新城珠江西路1号', rating: 4.9, reviewCount: 876,
+    tags: ['歌剧', '交响乐', '地标'],
+    description: '由扎哈·哈迪德设计，形如"砾石"，歌剧厅共1804座，声学效果达国际顶尖水平。',
+    transport: '地铁3/5号线珠江新城站步行约10分钟', phone: '020-38390000',
+    halls: [{ id: 'h1', name: '歌剧厅', capacity: 1804, sections: buildSections([
+      { id: 'A', name: '池座前区', type: 'orchestra', rows: 10, seatsPerRow: 34 },
+      { id: 'B', name: '池座后区', type: 'orchestra', rows: 8, seatsPerRow: 36 },
+      { id: 'C', name: '一层楼座', type: 'mezzanine', rows: 6, seatsPerRow: 38 },
+      { id: 'D', name: '二层楼座', type: 'balcony', rows: 5, seatsPerRow: 40 },
+    ])}],
+  },
+  {
+    id: 'youyi', name: '友谊剧院', cityId: 'guangzhou',
+    cover: 'https://images.unsplash.com/photo-1563770660941-20978e870e26?w=800&q=80',
+    address: '广州市越秀区人民北路696号', rating: 4.5, reviewCount: 334,
+    tags: ['话剧', '粤剧', '老剧院'],
+    description: '友谊剧院建于1965年，广州历史最悠久综合性剧院之一，约1100座，粤剧爱好者的心中圣地。',
+    transport: '地铁2号线越秀公园站步行约12分钟', phone: '020-86661606',
+    halls: [{ id: 'h1', name: '主剧场', capacity: 1100, sections: buildSections([
+      { id: 'A', name: '池座', type: 'orchestra', rows: 18, seatsPerRow: 30 },
+      { id: 'B', name: '楼座', type: 'mezzanine', rows: 6, seatsPerRow: 32 },
+    ])}],
+  },
+  // ─── 深圳 ───
+  {
+    id: 'sz_art', name: '深圳湾艺术中心·歌剧厅', cityId: 'shenzhen',
+    cover: 'https://images.unsplash.com/photo-1551892374-ecf8754cf8b0?w=800&q=80',
+    address: '深圳市南山区滨海大道33号', rating: 4.8, reviewCount: 543,
+    tags: ['歌剧', '音乐剧', '海景'],
+    description: '深圳新兴文化地标，歌剧厅共1800座，坐拥海景，建筑设计融合自然与艺术。',
+    transport: '地铁9号线深湾站步行约15分钟', phone: '0755-86983666',
+    halls: [{ id: 'h1', name: '歌剧厅', capacity: 1800, sections: buildSections([
+      { id: 'A', name: '池座前区', type: 'orchestra', rows: 10, seatsPerRow: 34 },
+      { id: 'B', name: '池座后区', type: 'orchestra', rows: 10, seatsPerRow: 36 },
+      { id: 'C', name: '一层楼座', type: 'mezzanine', rows: 6, seatsPerRow: 38 },
+      { id: 'D', name: '二层楼座', type: 'balcony', rows: 5, seatsPerRow: 40 },
+    ])}],
+  },
+  {
+    id: 'sz_poly', name: '深圳保利剧院', cityId: 'shenzhen',
+    cover: 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&q=80',
+    address: '深圳市福田区莲花路1008号', rating: 4.6, reviewCount: 412,
+    tags: ['音乐剧', '话剧', '演唱会'],
+    description: '深圳保利剧院共1680座，演出市场最活跃的综合性剧院，国内外优质音乐剧话剧的重要演出地。',
+    transport: '地铁1号线莲花北站步行约8分钟', phone: '0755-83296888',
+    halls: [{ id: 'h1', name: '主剧场', capacity: 1680, sections: buildSections([
+      { id: 'A', name: 'A区·池座', type: 'orchestra', rows: 14, seatsPerRow: 32 },
+      { id: 'B', name: 'B区·楼座一层', type: 'mezzanine', rows: 6, seatsPerRow: 36 },
+      { id: 'C', name: 'C区·楼座二层', type: 'balcony', rows: 5, seatsPerRow: 38 },
+    ])}],
+  },
+  // ─── 杭州 ───
+  {
+    id: 'hz_opera', name: '杭州大剧院·歌剧厅', cityId: 'hangzhou',
+    cover: 'https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=800&q=80',
+    address: '杭州市滨江区钱江路568号', rating: 4.7, reviewCount: 423,
+    tags: ['歌剧', '芭蕾', '交响乐'],
+    description: '以"月亮与太阳"为设计理念，歌剧厅共1537座，声学设计精良，是杭州文化艺术演出最高殿堂。',
+    transport: '地铁4号线西兴站步行约20分钟', phone: '0571-86858888',
+    halls: [{ id: 'h1', name: '歌剧厅', capacity: 1537, sections: buildSections([
+      { id: 'A', name: '池座前区', type: 'orchestra', rows: 9, seatsPerRow: 32 },
+      { id: 'B', name: '池座后区', type: 'orchestra', rows: 9, seatsPerRow: 34 },
+      { id: 'C', name: '一层楼座', type: 'mezzanine', rows: 5, seatsPerRow: 36 },
+      { id: 'D', name: '二层楼座', type: 'balcony', rows: 4, seatsPerRow: 38 },
+    ])}],
+  },
+  {
+    id: 'meixihu', name: '梅溪湖国际文化艺术中心', cityId: 'hangzhou',
+    cover: 'https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=800&q=80',
+    address: '杭州市西湖区天目山路398号', rating: 4.7, reviewCount: 312,
+    tags: ['音乐剧', '话剧', '新锐'],
+    description: '共1200座，近年来最受剧迷关注的演出场所，引进大量国内外高品质音乐剧和话剧作品。',
+    transport: '地铁3号线文新站步行约15分钟', phone: '0571-88888666',
+    halls: [{ id: 'h1', name: '主剧场', capacity: 1200, sections: buildSections([
+      { id: 'A', name: 'A区·池座', type: 'orchestra', rows: 12, seatsPerRow: 30 },
+      { id: 'B', name: 'B区·楼座', type: 'mezzanine', rows: 5, seatsPerRow: 32 },
+    ])}],
+  },
+  // ─── 苏州 ───
+  {
+    id: 'sz_culture', name: '苏州文化艺术中心·大剧院', cityId: 'suzhou',
+    cover: 'https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?w=800&q=80',
+    address: '苏州市工业园区星港街1号', rating: 4.8, reviewCount: 531,
+    tags: ['音乐剧', '歌剧', '园区地标'],
+    description: '由日本建筑师矶崎新设计，共1396座，华东地区最重要的综合性演艺场所之一。',
+    transport: '地铁1号线星海广场站步行约5分钟', phone: '0512-62580088',
+    halls: [{ id: 'h1', name: '大剧院', capacity: 1396, sections: buildSections([
+      { id: 'A', name: '池座前区', type: 'orchestra', rows: 9, seatsPerRow: 32 },
+      { id: 'B', name: '池座后区', type: 'orchestra', rows: 8, seatsPerRow: 34 },
+      { id: 'C', name: '一层楼座', type: 'mezzanine', rows: 5, seatsPerRow: 36 },
+      { id: 'D', name: '二层楼座', type: 'balcony', rows: 4, seatsPerRow: 38 },
+    ])}],
+  },
+  {
+    id: 'suzhouwan', name: '苏州湾大剧院', cityId: 'suzhou',
+    cover: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80',
+    address: '苏州市吴江区太湖新城湖滨路988号', rating: 4.6, reviewCount: 287,
+    tags: ['话剧', '交响乐', '湖景'],
+    description: '坐落于太湖之滨，建筑造型如水中帆影，共1400余座，苏州南部新城重要文化演出场所。',
+    transport: '地铁4号线苏州湾北站步行约10分钟', phone: '0512-63886688',
+    halls: [{ id: 'h1', name: '主剧场', capacity: 1400, sections: buildSections([
+      { id: 'A', name: 'A区·池座', type: 'orchestra', rows: 13, seatsPerRow: 30 },
+      { id: 'B', name: 'B区·楼座', type: 'mezzanine', rows: 6, seatsPerRow: 34 },
+    ])}],
+  },
+]
+
+export const MOCK_REVIEWS = [
+  { id: 1, userName: '音乐剧女孩', rating: 5, content: '音效超棒！视野也很好，强烈推荐池座前排中间，完全沉浸式的观演体验。', date: '2025-12-18', likes: 42 },
+  { id: 2, userName: '剧场常客Mia', rating: 4, content: '楼座视野比想象中好很多，距离感适中，价格也亲民。但座椅稍有些硬。', date: '2025-11-30', likes: 28 },
+  { id: 3, userName: '戏剧迷小橙', rating: 5, content: '氛围感拉满，工作人员很专业友好。停车位充足，出行方便。', date: '2025-11-15', likes: 19 },
+  { id: 4, userName: '百老汇追梦人', rating: 3, content: '位置有点偏，柱子遮了部分视线，购票时要注意避开有遮挡的区域。', date: '2025-10-22', likes: 11 },
+]
