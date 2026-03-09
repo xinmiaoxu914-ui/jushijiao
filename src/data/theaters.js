@@ -28,7 +28,7 @@ export const THEATERS = [
   // ─── 北京 ───
   {
     id: 'ncpa_opera', name: '国家大剧院·歌剧院', cityId: 'beijing',
-    cover: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
+    cover: 'https://images.unsplash.com/photo-1503095396549-807759245b35?w=800&q=80',
     address: '北京市西城区西长安街2号', rating: 4.9, reviewCount: 1286,
     tags: ['歌剧', '舞剧', '地标'],
     description: '国家大剧院歌剧院是中国最高规格的表演艺术场所，共设2416个座位，采用品字形舞台，以精湛的声学设计享誉世界。',
@@ -289,7 +289,7 @@ export const THEATERS = [
    //   { id: 'C', name: '楼座', type: 'mezzanine', rows: 5, seatsPerRow: 36 },
   //  ])}],
  // },
-  // 上海话剧/小剧场
+
   {
     id: 'sh_huaju_art', name: '上海话剧艺术中心·艺术剧院', cityId: 'shanghai',
     cover: 'https://bkimg.cdn.bcebos.com/smart/f31fbe096b63f62481125bbb8144ebf81a4ca33f-bkimg-process,v_1,rw_644,rh_500,maxl_800',
@@ -546,7 +546,7 @@ export const THEATERS = [
     ])}],
   },
     { id: "sh_huangpu_theater_small", name: "上海黄浦剧场（小剧场）", cityId: "shanghai",
-      cover: 'https://pro76ba1c.pic49.websiteonline.cn/upload/3b292df5e0fe9925ec061e2133a85edf8db171bc.png', 
+      cover: '/images/huangpujuchang.png', 
       address: "上海市北京东路780号" },
     { id: "sh_muou_theater", name: "上海木偶剧团", cityId: "shanghai",
       cover: 'https://static-pc.shcstheatre.com/webcontent/img/01_maintheatre.jpg', 
