@@ -568,8 +568,6 @@ export const THEATERS = [
       { id: 'B', name: '楼座', type: 'mezzanine', rows: 5, seatsPerRow: 30 },
     ])}],
   },
-    { id: 'sh_huangpu_theater', name: '上海黄浦剧场', cityId: 'shanghai',
-      address: '上海市北京东路780号'}, 
 
     { id: "sh_huangpu_theater_small", name: "上海黄浦剧场（小剧场）", cityId: "shanghai", address: "上海市北京东路780号" },
     { id: "sh_muou_theater", name: "上海木偶剧团", cityId: "shanghai", address: "上海市南京西路388号五楼" },                                                        
