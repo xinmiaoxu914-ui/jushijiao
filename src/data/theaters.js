@@ -546,7 +546,7 @@ export const THEATERS = [
     ])}],
   },
     { id: "sh_huangpu_theater_small", name: "上海黄浦剧场（小剧场）", cityId: "shanghai",
-      cover: 'http://pro76ba1c.pic49.websiteonline.cn/upload/3b292df5e0fe9925ec061e2133a85edf8db171bc.png', 
+      cover: 'https://pro76ba1c.pic49.websiteonline.cn/upload/3b292df5e0fe9925ec061e2133a85edf8db171bc.png', 
       address: "上海市北京东路780号" },
     { id: "sh_muou_theater", name: "上海木偶剧团", cityId: "shanghai",
       cover: 'https://static-pc.shcstheatre.com/webcontent/img/01_maintheatre.jpg', 
