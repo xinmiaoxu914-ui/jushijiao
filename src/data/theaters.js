@@ -8,8 +8,8 @@ function buildSections(config) {
       seats: Array.from({ length: s.seatsPerRow }, (_, si) => ({
         num: si + 1,
         seatId: `${s.id}_${String.fromCharCode(65 + ri)}_${si + 1}`,
-        photoCount: Math.random() > 0.7 ? Math.floor(Math.random() * 8) + 1 : 0,
-        viewQuality: ['full', 'partial', 'obstructed'][Math.floor(Math.random() * 3)],
+        photoCount: 0,
+        viewQuality: 'unknown',
       }))
     }))
   }))
@@ -549,7 +549,7 @@ export const THEATERS = [
       cover: '/images/huangpujuchang.jpg', 
       address: "上海市北京东路780号" , rating: 4.5, reviewCount: 178},
     { id: "sh_muou_theater", name: "上海木偶剧团", cityId: "shanghai",
-      cover: '/images/shanghaimuoujutuan.png', 
+      cover: './images/shanghaimuoujutuan.png', 
       address: "上海市南京西路388号五楼" },                                                        
     { id: "sh_muou_theater_small", name: "上海木偶剧团（小剧场）", cityId: "shanghai", 
       cover: 'https://static-pc.shcstheatre.com/webcontent/img/01_maintheatre.jpg', 
