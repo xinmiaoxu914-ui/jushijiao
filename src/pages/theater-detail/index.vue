@@ -18,31 +18,8 @@
         <view class="absolute bottom-0 left-0 right-0 p-4">
           <text class="block text-xl font-black text-white mb-2 leading-snug">{{ theater.name }}</text>
           <view class="flex items-center gap-2">
-            <view class="flex items-center gap-1 bg-amber-50/90 rounded-full px-2 py-0.5">
-              <text class="text-amber-500 text-xs">★</text>
-              <text class="text-amber-600 text-sm font-bold">{{ theater.rating }}</text>
-              <text class="text-gray-500 text-xs">{{ theater.reviewCount }}条</text>
-            </view>
             <text v-for="tag in theater.tags" :key="tag" class="text-xs bg-white/20 text-white px-2 py-0.5 rounded-full">{{ tag }}</text>
           </view>
-        </view>
-      </view>
-
-      <!-- 快捷操作 -->
-      <view class="bg-white flex border-b border-gray-100">
-        <view class="flex-1 flex flex-col items-center py-3 gap-1" @tap="onCall">
-          <text class="text-xl">📞</text>
-          <text class="text-xs text-gray-500">电话</text>
-        </view>
-        <view class="w-px bg-gray-100" />
-        <view class="flex-1 flex flex-col items-center py-3 gap-1" @tap="onShare">
-          <text class="text-xl">🔗</text>
-          <text class="text-xs text-gray-500">分享</text>
-        </view>
-        <view class="w-px bg-gray-100" />
-        <view class="flex-1 flex flex-col items-center py-3 gap-1" @tap="goReview">
-          <text class="text-xl">✍️</text>
-          <text class="text-xs text-gray-500">写评价</text>
         </view>
       </view>
 
@@ -165,41 +142,6 @@
           </view>
         </view>
       </view>
-
-      <!-- TAB: 评价 -->
-      <view v-if="activeTab === 'review'" class="pb-8">
-        <view class="bg-white mx-4 mt-4 rounded-2xl p-5 shadow-sm flex flex-col items-center">
-          <view class="flex items-baseline gap-1">
-            <text class="text-5xl font-black text-[#6B1A2E]">{{ theater.rating }}</text>
-            <text class="text-base text-gray-400">/ 5.0</text>
-          </view>
-          <text class="text-2xl text-amber-400 my-1">{{ starStr(theater.rating) }}</text>
-          <text class="text-xs text-gray-400">{{ theater.reviewCount }} 条评价</text>
-        </view>
-        <view class="mx-4 mt-3 bg-[#6B1A2E] rounded-2xl py-3 text-center text-white text-sm font-bold" @tap="goReview">
-          + 写评价
-        </view>
-        <view class="px-4 mt-3 flex flex-col gap-3">
-          <view v-for="r in reviews" :key="r.id" class="bg-white rounded-2xl p-4 shadow-sm">
-            <view class="flex items-center gap-2.5 mb-2.5">
-              <view class="w-9 h-9 rounded-full bg-[#6B1A2E] text-white text-sm font-bold flex items-center justify-center flex-shrink-0">
-                {{ r.userName[0] }}
-              </view>
-              <view class="flex-1">
-                <text class="block text-sm font-semibold text-gray-900">{{ r.userName }}</text>
-                <text class="text-xs text-gray-400">{{ r.date }}</text>
-              </view>
-              <text class="text-amber-400 text-xs">{{ '★'.repeat(r.rating) }}</text>
-            </view>
-            <text class="block text-sm text-gray-600 leading-relaxed mb-2.5">{{ r.content }}</text>
-            <view class="flex justify-end">
-              <view class="bg-gray-50 rounded-full px-3 py-1 text-xs text-gray-500">
-                👍 {{ r.likes }}
-              </view>
-            </view>
-          </view>
-        </view>
-      </view>
     </view>
   </view>
 </template>
@@ -207,7 +149,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 import Taro, { useRouter } from '@tarojs/taro'
-import { THEATERS, CITIES, MOCK_REVIEWS } from '@/data/theaters'
+import { THEATERS } from '@/data/theaters'
 
 const router = useRouter()
 const theater = computed(() => THEATERS.find(t => t.id === router.params.id))
@@ -216,13 +158,11 @@ const activeTab = ref('seat')
 const tabs = [
   { id: 'seat', label: '座位图' },
   { id: 'info', label: '剧院信息' },
-  { id: 'review', label: '用户评价' },
 ]
 
 const selectedHall = ref(theater.value?.halls?.[0]?.id || '')
 const openSection = ref('')
 const selectedSeat = ref('')
-const reviews = MOCK_REVIEWS
 
 const currentSections = computed(() => {
   const hall = theater.value?.halls?.find(h => h.id === selectedHall.value)
@@ -252,10 +192,6 @@ function sectionCoverage(sec) {
   return pct > 0 ? `${pct}% 有视角` : '暂无视角图'
 }
 
-function starStr(r) {
-  return '★'.repeat(Math.floor(r)) + (r % 1 >= 0.5 ? '½' : '')
-}
-
 function toggleSection(id) {
   openSection.value = openSection.value === id ? '' : id
 }
@@ -269,10 +205,5 @@ function onSeatTap(sec, row, seat) {
   }, 150)
 }
 
-function onCall() { Taro.makePhoneCall({ phoneNumber: theater.value?.phone }) }
-function onShare() { Taro.showShareMenu() }
 function goBack() { Taro.navigateBack() }
-function goReview() {
-  Taro.navigateTo({ url: `/pages/review-write/index?theaterId=${theater.value.id}&theaterName=${encodeURIComponent(theater.value.name)}` })
-}
 </script>
