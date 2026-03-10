@@ -1,3 +1,7 @@
+import huangpuImg from '../assets/images/huangpujuchang.jpg'
+import shanghaiMuouImg from '../assets/images/shanghaimuoujutuan.png'
+import shanghaiDajuyuanImg from '../assets/images/shanghaidajuyuandajuchang.jpg'
+
 // 座位区段数据生成
 function buildSections(config) {
   return config.map(s => ({
@@ -82,7 +86,7 @@ export const THEATERS = [
   // ─── 上海（30个场馆，覆盖大/中/小剧场及演艺新空间）───
   {
     id: 'shanghai_theater', name: '上海大剧院·大剧场', cityId: 'shanghai',
-    cover: 'https://bkimg.cdn.bcebos.com/pic/86d6277f9e2f0708c74a39a0ea24b899a801f2c7',
+    cover: shanghaiDajuyuanImg,
     address: '上海市黄浦区人民大道300号', rating: 4.8, reviewCount: 1423,
     tags: ['歌剧', '芭蕾', '音乐剧'],
     description: '上海大剧院由法国夏邦杰建筑设计公司设计，屋顶采用两边反翘的白色弧形，是上海标志性文化建筑。大剧场共1842座，分三层看台，观众厅约1000㎡，高19.5m，金色与红色为主色调。',
@@ -546,10 +550,10 @@ export const THEATERS = [
     ])}],
   },
     { id: "sh_huangpu_theater_small", name: "上海黄浦剧场（小剧场）", cityId: "shanghai",
-      cover: './images/huangpujuchang.jpg', 
+      cover: huangpuImg,
       address: "上海市北京东路780号" , rating: 4.5, reviewCount: 178},
     { id: "sh_muou_theater", name: "上海木偶剧团", cityId: "shanghai",
-      cover: './images/shanghaimuoujutuan.png', 
+      cover: shanghaiMuouImg,
       address: "上海市南京西路388号五楼" },                                                        
     { id: "sh_muou_theater_small", name: "上海木偶剧团（小剧场）", cityId: "shanghai", 
       cover: 'https://static-pc.shcstheatre.com/webcontent/img/01_maintheatre.jpg', 
