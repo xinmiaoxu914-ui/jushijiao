@@ -58,7 +58,7 @@ export default defineConfig(async (merge, { command, mode }) => {
       },
     },
     h5: {
-      publicPath: "./",
+      publicPath: "/",
       staticDirectory: "static",
       esnextModules: ["taro-ui"],
       miniCssExtractPluginOption: {
