@@ -1,7 +1,173 @@
 import huangpuImg from '../assets/images/huangpujuchang.jpg'
 import shanghaiMuouImg from '../assets/images/shanghaimuoujutuan.png'
 import shanghaiDajuyuanImg from '../assets/images/shanghaidajuyuandajuchang.jpg'
+// --- 批量导入剧院封面图片 ---
 
+// 黄浦区
+import huangpuImg from '../assets/images/huangpu-juchang.jpg'
+import huangpuXiaoImg from '../assets/images/huangpu-xiao.jpg'
+import muouImg from '../assets/images/muou-jutuan.jpg'
+import muouXiaoImg from '../assets/images/muou-xiao.jpg'
+import xinguangImg from '../assets/images/xinguang-yiyuan.jpg'
+import gongwutaiImg from '../assets/images/gongwutai.jpg'
+import zhongguoDaxiyuanImg from '../assets/images/zhongguo-daxiyuan.jpg'
+import luwanTiyuImg from '../assets/images/luwan-tiyu.jpg'
+import etongHeixiaziImg from '../assets/images/etong-heixiazi.jpg'
+import etongZhongxinImg from '../assets/images/etong-zhongxin.jpg'
+import etongXiaoImg from '../assets/images/etong-xiao.jpg'
+import dajuyuanDaImg from '../assets/images/dajuyuan-da.jpg'
+import dajuyuanZhongImg from '../assets/images/dajuyuan-zhong.jpg'
+import dajuyuanXiaoImg from '../assets/images/dajuyuan-xiao.jpg'
+import yinyuetingImg from '../assets/images/yinyueting.jpg'
+import yinyuetingXiaoImg from '../assets/images/yinyueting-xiao.jpg'
+import tianchanImg from '../assets/images/tianchan-yifu.jpg'
+import lanxinImg from '../assets/images/lanxin-daxiyuan.jpg'
+import renminDawutaiImg from '../assets/images/renmin-dawutai.jpg'
+import wenhuaGuangchangImg from '../assets/images/wenhua-guangchang.jpg'
+import huangpuBaiyulanImg from '../assets/images/huangpu-baiyulan.jpg'
+import huangpuYaluImg from '../assets/images/huangpu-yalu.jpg'
+import changjiangHongImg from '../assets/images/changjiang-hong.jpg'
+import changjiangHeiImg from '../assets/images/changjiang-hei.jpg'
+import yuyuanLiyuanImg from '../assets/images/yuyuan-liyuan.jpg'
+import molihuaImg from '../assets/images/molihua.jpg'
+
+// 静安 & 徐汇 & 长宁
+import show800Img from '../assets/images/800-show.jpg'
+import shangzhanImg from '../assets/images/shangzhan-zhongxin.jpg'
+import huobanImg from '../assets/images/huoban-juchang.jpg'
+import shangyanguImg from '../assets/images/shangyangu.jpg'
+import shangxiImg from '../assets/images/shanghai-xiju-xueyuan.jpg'
+import wenyiHuitangImg from '../assets/images/wenyi-huitang.jpg'
+import lanxinGuangyingImg from '../assets/images/lanxin-guangying.jpg'
+import malanhuaImg from '../assets/images/malanhua.jpg'
+import jinganTiyuImg from '../assets/images/jingan-tiyu.jpg'
+import shangxiShiyanImg from '../assets/images/shangxi-shiyan.jpg'
+import yunfengImg from '../assets/images/yunfeng-juchang.jpg'
+import meiqiImg from '../assets/images/meiqi-daxiyuan.jpg'
+import maixichengImg from '../assets/images/maixicheng.jpg'
+import shangchengImg from '../assets/images/shangcheng-juchang.jpg'
+import songyuanImg from '../assets/images/songyuan-chayi.jpg'
+import daningImg from '../assets/images/daning-juchang.jpg'
+import tieluImg from '../assets/images/tielu-wenhuagong.jpg'
+import hubeiImg from '../assets/images/hubei-dianyingyuan.jpg'
+import yihaiImg from '../assets/images/yihai-juchang.jpg'
+import huajuyuanArtImg from '../assets/images/huajuyuan-art.jpg'
+import huajuyuanShalongImg from '../assets/images/huajuyuan-shalong.jpg'
+import huajuyuanD6Img from '../assets/images/huajuyuan-d6.jpg'
+import daxiyuanImg from '../assets/images/shanghai-daxiyuan.jpg'
+import qunyiguanImg from '../assets/images/qunyiguan.jpg'
+import jiaoxiangImg from '../assets/images/jiaoxiang-yinyueting.jpg'
+import tianlinImg from '../assets/images/tianlin-wenhua.jpg'
+import shangyinImg from '../assets/images/shangyin-gejuyuan.jpg'
+import xuhuiTiyuImg from '../assets/images/xuhui-tiyu.jpg'
+import dawutaiImg from '../assets/images/shanghai-dawutai.jpg'
+import shangjuchangImg from '../assets/images/shangjuchang.jpg'
+import wanpingImg from '../assets/images/wanping-yiyuan.jpg'
+
+// 虹口 & 杨浦 & 浦东 & 其他
+import hongkouZuqiuImg from '../assets/images/hongkou-zuqiu.jpg'
+import modernSkyImg from '../assets/images/modern-sky.jpg'
+import quyangImg from '../assets/images/quyang-wenhua.jpg'
+import wei1933Img from '../assets/images/1933-wei.jpg'
+import hongkouGongImg from '../assets/images/hongkou-gong.jpg'
+import xingmengImg from '../assets/images/xingmeng-juchang.jpg'
+import jingwuImg from '../assets/images/jingwu-tiyuguan.jpg'
+import zhenzhuImg from '../assets/images/zhenzhu-juchang.jpg'
+import blueNoteImg from '../assets/images/blue-note.jpg'
+import beiwaitanImg from '../assets/images/beiwaitan-youbang.jpg'
+import changningMinsuImg from '../assets/images/changning-minsu.jpg'
+import changningArtImg from '../assets/images/changning-art.jpg'
+import wudaoZhongxinImg from '../assets/images/wudao-zhongxin.jpg'
+import donghongqiaoImg from '../assets/images/donghongqiao.jpg'
+import jianchuanImg from '../assets/images/jianchuan-juchang.jpg'
+import xindongyuanImg from '../assets/images/xindongyuan.jpg'
+import pujiangImg from '../assets/images/pujiang-yingjuyuan.jpg'
+import qizhongImg from '../assets/images/qizhong-senlin.jpg'
+import wujingImg from '../assets/images/wujing-wenhua.jpg'
+import chengshiImg from '../assets/images/chengshi-juchang.jpg'
+import suoshiShengImg from '../assets/images/suoshi-sheng.jpg'
+import suoshiMoImg from '../assets/images/suoshi-mo.jpg'
+import dalingwanImg from '../assets/images/dalingwan-art.jpg'
+import qingpuWenhuaImg from '../assets/images/qingpu-wenhua.jpg'
+import zhaoxiangImg from '../assets/images/zhaoxiang-wenhua.jpg'
+import zhongguImg from '../assets/images/zhonggu-yingjuyuan.jpg'
+import zhujiajiaoImg from '../assets/images/zhujiajiao-yingjuyuan.jpg'
+import liantangImg from '../assets/images/liantang-yingjuyuan.jpg'
+import hongguanImg from '../assets/images/hongguan.jpg'
+import yongleImg from '../assets/images/yongle-yingyuan.jpg'
+import shouweiImg from '../assets/images/shouwei-qinzi.jpg'
+import qingDangdaiImg from '../assets/images/qing-dangdai.jpg'
+import zaomengImg from '../assets/images/zaomeng-hezi.jpg'
+import youngDaImg from '../assets/images/young-da.jpg'
+import youngXiaoImg from '../assets/images/young-xiao.jpg'
+import donggongImg from '../assets/images/donggong-juchang.jpg'
+import fashionImg from '../assets/images/fashion-zhongxin.jpg'
+import benchiImg from '../assets/images/benchi-wenhua.jpg'
+import benchiClubImg from '../assets/images/benchi-club.jpg'
+import haidongImg from '../assets/images/haidong-yingjuyuan.jpg'
+import zhoupuImg from '../assets/images/zhoupu-yingjuyuan.jpg'
+import xuanqiaoImg from '../assets/images/xuanqiao-yingjuyuan.jpg'
+import hangtouImg from '../assets/images/hangtou-wenhua.jpg'
+import sandunImg from '../assets/images/sandun-yingjuyuan.jpg'
+import chuanshaImg from '../assets/images/chuansha-yingjuyuan.jpg'
+import yancangImg from '../assets/images/yancang-yingjuyuan.jpg'
+import dongfangImg from '../assets/images/dongfang-dianying.jpg'
+import hangtouShuchangImg from '../assets/images/hangtou-shuchang.jpg'
+import sanzaoImg from '../assets/images/sanzao-yingjuyuan.jpg'
+import datuanImg from '../assets/images/datuan-yongchun.jpg'
+import hangtouTaoImg from '../assets/images/hangtou-taoyuan.jpg'
+import shangyinDongyiImg from '../assets/images/shangyin-dongyi.jpg'
+import lanxinYingxiImg from '../assets/images/lanxin-yingxi.jpg'
+import zhoupuJuchangImg from '../assets/images/zhoupu-juchang.jpg'
+import yeshengImg from '../assets/images/yesheng-dongwuyuan.jpg'
+import pudongWenhuaImg from '../assets/images/pudong-wenhua.jpg'
+import ximalayaImg from '../assets/images/ximalaya-daguan.jpg'
+import shipping1862Img from '../assets/images/1862-yinhaocang.jpg'
+import dongyiYinyueImg from '../assets/images/dongyi-yinyue.jpg'
+import dongyiGejuImg from '../assets/images/dongyi-geju.jpg'
+import dongyiYanzhouImg from '../assets/images/dongyi-yanzhou.jpg'
+import xinchangImg from '../assets/images/xinchang-wenhua.jpg'
+import huinanImg from '../assets/images/huinan-wenhua.jpg'
+import zhangjiangImg from '../assets/images/zhangjiang-xijugu.jpg'
+import hongtingImg from '../assets/images/hongting.jpg'
+import disneyDaImg from '../assets/images/disney-da.jpg'
+import disneyStageImg from '../assets/images/disney-stage.jpg'
+import zhonghuaImg from '../assets/images/zhonghua-yishugong.jpg'
+import sanlinImg from '../assets/images/sanlin-yingjuyuan.jpg'
+import qianguqingImg from '../assets/images/qianguqing.jpg'
+import bailemenImg from '../assets/images/bailemen.jpg'
+import waigaoqiaoImg from '../assets/images/waigaoqiao-yishu.jpg'
+import qiantan31Img from '../assets/images/qiantan-31.jpg'
+import guangxinImg from '../assets/images/guangxin-yanyi.jpg'
+import fengxianJiguanImg from '../assets/images/fengxian-jiguan.jpg'
+import wuqiaoImg from '../assets/images/wuqiao-mudan.jpg'
+import nanqiaoImg from '../assets/images/nanqiao-yingjuyuan.jpg'
+import huqiaoImg from '../assets/images/huqiao-yingjuyuan.jpg'
+import zhelinImg from '../assets/images/zhelin-yingjuyuan.jpg'
+import qianqiaoImg from '../assets/images/qianqiao-yingjuyuan.jpg'
+import qingcunImg from '../assets/images/qingcun-wenhua.jpg'
+import jiukeshuDaImg from '../assets/images/jiukeshu-da.jpg'
+import jiukeshuXiaoImg from '../assets/images/jiukeshu-xiao.jpg'
+import jiukeshuShiyanImg from '../assets/images/jiukeshu-shiyan.jpg'
+import jiukeshuSenlinImg from '../assets/images/jiukeshu-senlin.jpg'
+import jiukeshuShuianImg from '../assets/images/jiukeshu-shuian.jpg'
+import baoshanWenhuaImg from '../assets/images/baoshan-wenhua.jpg'
+import yihongImg from '../assets/images/yihong-juchang.jpg'
+import baoshanStarxImg from '../assets/images/baoshan-starx.jpg'
+import baoliImg from '../assets/images/baoli-dajuyuan.jpg'
+import jiadingImg from '../assets/images/jiading-yingjuyuan.jpg'
+import mahuaImg from '../assets/images/kaixin-mahua.jpg'
+import chongmingImg from '../assets/images/chongming-yingjuyuan.jpg'
+import chongmingHujuImg from '../assets/images/chongming-huju.jpg'
+import fengyingzhouImg from '../assets/images/fengyingzhou.jpg'
+import haichangHuanleImg from '../assets/images/haichang-huanle.jpg'
+import haichangHaitunImg from '../assets/images/haichang-haitun.jpg'
+import haichangDongwuImg from '../assets/images/haichang-dongwu.jpg'
+import nichengImg from '../assets/images/nicheng-yingjuyuan.jpg'
+import wanxiangImg from '../assets/images/wanxiang-yingjuyuan.jpg'
+import lingangImg from '../assets/images/lingang-yanyi.jpg'
+import dishuihuImg from '../assets/images/dishuihu-juchang.jpg'
+import yunjianImg from '../assets/images/baoli-yunjian.jpg'
 // 座位区段数据生成
 function buildSections(config) {
   return config.map(s => ({
@@ -100,7 +266,7 @@ export const THEATERS = [
   },
   {
     id: 'shcs', name: '上海文化广场·主剧场', cityId: 'shanghai',
-    cover: 'https://static-pc.shcstheatre.com/webcontent/img/01_maintheatre.jpg',
+    cover: wenhuaGuangchangImg,
     address: '上海市黄浦区永嘉路36号', rating: 4.9, reviewCount: 2156,
     tags: ['音乐剧', '下沉式剧院', '国内最大'],
     description: '上海文化广场是国内最大的下沉式专业音乐剧剧场，共1949座。进门即三楼，一楼需下两层。前4排为冲台位（无坡度），5排起坡，二楼设7个带独立卫生间的VIP包厢，三楼"山顶位"提供完整舞台全景。',
@@ -116,7 +282,7 @@ export const THEATERS = [
   },
   {
     id: 'meiki', name: '美琪大戏院', cityId: 'shanghai',
-    cover: 'https://dimg04.c-ctrip.com/images/0582r12000b242if430D5.jpg',
+    cover: meiqiImg,
     address: '上海市静安区江宁路66号', rating: 4.8, reviewCount: 987,
     tags: ['音乐剧', '历史建筑', '2025焕新'],
     description: '建于1941年，由建筑师范文照设计，取"美轮美奂，琪玉无瑕"之意，曾被称为"远东最新型艺术影宫"。2025年5月完成技术大改造，新建独立钢架体系，吊杆荷载提升至原来1.5-2倍，舞台参数媲美伦敦西区。共约1328座。',
@@ -130,7 +296,7 @@ export const THEATERS = [
   },
   {
     id: 'lanxin', name: '兰心大戏院', cityId: 'shanghai',
-    cover: 'https://bkimg.cdn.bcebos.com/pic/9c16fdfaaf51f3decec09af295eef01f3a297931',
+    cover: lanxinImg,
     address: '上海市黄浦区茂名南路57号', rating: 4.7, reviewCount: 612,
     tags: ['话剧', '百年剧院', '2022修缮'],
     description: '建于1930年，是上海最古老的西式剧院。2022年完成历史性修缮，圆穹顶恢复30年代原貌，3D建模精准复原艺术装饰线条。共702座（一楼438座，二楼264座），舞台吊杆负重从220kg提升至500kg。',
@@ -142,7 +308,7 @@ export const THEATERS = [
   },
   {
     id: 'shangju', name: '上剧场', cityId: 'shanghai',
-    cover: 'https://bkimg.cdn.bcebos.com/pic/1b4c510fd9f9d72a3b4dcc9cdf2a2834349bbb02',
+    cover: shangjuchangImg,
     address: '上海市徐汇区肇嘉浜路1111号美罗城5楼', rating: 4.8, reviewCount: 923,
     tags: ['话剧', '赖声川', '美罗城5楼'],
     description: '赖声川亲自设计，位于美罗城商场5楼，全场699座。阶梯状观众席整体高于舞台，第一排不必仰头，视野极佳。设有"情侣座"（座位间无横杠），台口与地面仅0.69m高差，近距离感极强。',
@@ -169,7 +335,7 @@ export const THEATERS = [
   },
   {
     id: 'sh_renmin', name: '人民大舞台', cityId: 'shanghai',
-    cover: 'https://bkimg.cdn.bcebos.com/pic/2934349b033b5bb5f29819a439d3d539b600bc18',
+    cover: renminDawutaiImg,
     address: '上海市黄浦区湖北路663号', rating: 4.5, reviewCount: 421,
     tags: ['话剧', '戏曲', '百年老戏院'],
     description: '人民大舞台是上海的百年剧院，2011年翻修重开后成为热门话剧场所，共1006座。历史底蕴深厚，见证了上海演艺百年变迁。',
@@ -199,7 +365,7 @@ export const THEATERS = [
   },
   {
     id: 'sh_beiwaitan', name: '北外滩友邦大剧院', cityId: 'shanghai',
-    cover: 'https://bkimg.cdn.bcebos.com/pic/024f78f0f736afc379315c293a4efcc4b74543a9b47a',
+    cover: beiwaitanImg,
     address: '上海市虹口区东大名路889号来福士广场', rating: 4.8, reviewCount: 634,
     tags: ['音乐剧', '北外滩', '新地标'],
     description: '2023年开业的上海演艺新地标，2025年演出季引进《日落大道》《指环王》等重磅音乐剧，年演出超64场。与北外滩来福士商业综合体无缝连接。',
