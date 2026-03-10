@@ -1,6 +1,7 @@
 {
   "name": "taro-vue3-template",
   "version": "1.0.0",
+  "homepage": "https://xinmiaoxu914-ui.github.io/jushijiao",
   "private": true,
   "description": "Taro Vue3 Mini-program Template",
   "templateInfo": {
@@ -12,6 +13,8 @@
   "scripts": {
     "dev": "npm run build -- --watch",
     "build": "taro build --type h5",
+    "predeploy": "npm run build",   
+    "deploy": "gh-pages -d dist" ,  
     "upload": "taro build --type h5 && qdmp login && qdmp upload"
   },
   "browserslist": [
@@ -36,14 +39,13 @@
     "@tarojs/runtime": "4.1.5",
     "@tarojs/shared": "4.1.5",
     "@tarojs/taro": "4.1.5",
-    "vue": "^3.0.0",
-    "lodash": "^4.17.21",
     "echco-effuse": "^2.1.44",
     "flyio": "^0.6.14",
-    "vconsole": "^3.15.1"
+    "lodash": "^4.17.21",
+    "vconsole": "^3.15.1",
+    "vue": "^3.0.0"
   },
   "devDependencies": {
-    "qdmp-cli": "^0.1.4",
     "@babel/core": "^7.24.4",
     "@babel/plugin-transform-class-properties": "7.25.9",
     "@commitlint/cli": "^19.8.1",
@@ -58,9 +60,11 @@
     "eslint": "^8.57.0",
     "eslint-config-taro": "4.1.5",
     "eslint-plugin-vue": "^9.17.0",
+    "gh-pages": "^6.3.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
     "postcss": "^8.4.38",
+    "qdmp-cli": "^0.1.4",
     "stylelint": "^16.4.0",
     "stylelint-config-standard": "^38.0.0",
     "tailwindcss": "^3.4.3",
