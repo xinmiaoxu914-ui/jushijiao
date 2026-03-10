@@ -32,6 +32,7 @@ import sh_muou_theater_smallImg from '../assets/images/sh-muou-theater-small.jpg
 import sh_xinguang_cinemaImg from '../assets/images/sh-xinguang-cinema.jpg'
 import sh_gongwutaiImg from '../assets/images/sh-gongwutai.jpg'
 import sh_zhongguo_theaterImg from '../assets/images/sh-zhongguo-theater.jpg'
+import sh_luwan_sportsImg from '../assets/images/sh-luwan-sports.jpg'
 import sh_children_art_blackImg from '../assets/images/sh-children-art-black.jpg'
 import sh_children_art_centerImg from '../assets/images/sh-children-art-center.jpg'
 import sh_children_art_smallImg from '../assets/images/sh-children-art-small.jpg'
