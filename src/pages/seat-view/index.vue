@@ -43,8 +43,13 @@
       </view>
     </view>
 
+    <!-- 加载中 -->
+    <view v-if="loading" class="flex justify-center pt-12">
+      <text class="text-sm text-gray-400">加载中...</text>
+    </view>
+
     <!-- 照片网格 -->
-    <view v-if="photos.length">
+    <view v-else-if="photos.length">
       <text class="block px-4 text-xs text-gray-400 mb-2">共 {{ photos.length }} 张视角图</text>
       <view class="grid grid-cols-2 gap-3 px-4 pb-8">
         <view
@@ -58,9 +63,6 @@
               {{ qualityLabel(p.quality) }}
             </view>
             <text class="text-xs text-white/60">{{ p.date }}</text>
-          </view>
-          <view v-if="p.uploaderName" class="absolute top-2 right-2 bg-black/40 rounded-full px-2 py-0.5">
-            <text class="text-white text-xs">by {{ p.uploaderName }}</text>
           </view>
         </view>
       </view>
@@ -122,9 +124,9 @@
 
         <view
           class="rounded-full py-3.5 text-center text-sm font-bold text-white"
-          :class="previewUrl && uploadQuality ? 'bg-[#6B1A2E]' : 'bg-gray-300'"
+          :class="previewUrl && uploadQuality && !uploading ? 'bg-[#6B1A2E]' : 'bg-gray-300'"
           @tap="submitUpload"
-        >提交视角</view>
+        >{{ uploading ? '上传中...' : '提交视角' }}</view>
       </view>
     </view>
 
@@ -142,26 +144,26 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import Taro, { useRouter } from '@tarojs/taro'
+import { uploadImage, saveSeatPhoto, fetchSeatPhotos } from '@/utils/upload'
 
 const router = useRouter()
-const { seatId, section, row, num, theater: theaterName } = router.params
+const { seatId, section, row, num, theater: theaterName, theaterId } = router.params
 const sectionName = decodeURIComponent(section || '')
 const rowLabel = decodeURIComponent(row || '')
 
-// 模拟已有视角数据
-const DEMO = {
-  'A_A_5': [
-    { imageUrl: 'https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=600', quality: 'full', date: '2025-12-10', uploaderName: '剧迷小鱼' },
-    { imageUrl: 'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=600', quality: 'full', date: '2025-11-20', uploaderName: 'Luna' },
-  ],
-}
+const photos = ref([])
+const loading = ref(true)
 
-const localPhotos = ref(JSON.parse(Taro.getStorageSync('views_' + seatId) || '[]'))
-const allPhotos = computed(() => [...(DEMO[seatId] || []), ...localPhotos.value])
+onMounted(async () => {
+  try {
+    photos.value = await fetchSeatPhotos(seatId)
+  } finally {
+    loading.value = false
+  }
+})
 
-const photos = computed(() => allPhotos.value.map(p => ({ ...p })))
 const qCounts = computed(() => {
   const c = { full: 0, partial: 0, obstructed: 0 }
   photos.value.forEach(p => { if (c[p.quality] !== undefined) c[p.quality]++ })
@@ -184,29 +186,43 @@ function qualityBadge(q) {
 const showModal = ref(false)
 const previewUrl = ref('')
 const uploadQuality = ref('')
+const uploading = ref(false)
 const fullscreen = ref(null)
 
 function goBack() { Taro.navigateBack() }
-
-function closeModal() { showModal.value = false; previewUrl.value = ''; uploadQuality.value = '' }
+function closeModal() {
+  if (uploading.value) return
+  showModal.value = false
+  previewUrl.value = ''
+  uploadQuality.value = ''
+}
 
 function pickPhoto() {
-  Taro.chooseMedia({
-    count: 1, mediaType: ['image'], sourceType: ['album', 'camera'],
-    success(res) { previewUrl.value = res.tempFiles[0].tempFilePath }
+  Taro.chooseImage({
+    count: 1,
+    sourceType: ['album', 'camera'],
+    success(res) { previewUrl.value = res.tempFilePaths[0] },
   })
 }
 
-function submitUpload() {
-  if (!previewUrl.value || !uploadQuality.value) return
+async function submitUpload() {
+  if (!previewUrl.value || !uploadQuality.value || uploading.value) return
+  uploading.value = true
   Taro.showLoading({ title: '上传中...' })
-  setTimeout(() => {
-    Taro.hideLoading()
-    const newPhoto = { imageUrl: previewUrl.value, quality: uploadQuality.value, date: new Date().toLocaleDateString('zh-CN') }
-    localPhotos.value = [...localPhotos.value, newPhoto]
-    Taro.setStorageSync('views_' + seatId, JSON.stringify(localPhotos.value))
+  try {
+    const imageUrl = await uploadImage(previewUrl.value)
+    await saveSeatPhoto({ seatId, theaterId, imageUrl, quality: uploadQuality.value })
+    photos.value = [
+      { imageUrl, quality: uploadQuality.value, date: new Date().toLocaleDateString('zh-CN') },
+      ...photos.value,
+    ]
     closeModal()
     Taro.showToast({ title: '上传成功！感谢分享', icon: 'success', duration: 2000 })
-  }, 1200)
+  } catch (e) {
+    Taro.showToast({ title: e.message || '上传失败，请重试', icon: 'none', duration: 2500 })
+  } finally {
+    Taro.hideLoading()
+    uploading.value = false
+  }
 }
 </script>
