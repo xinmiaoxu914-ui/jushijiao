@@ -21,7 +21,9 @@ export default defineConfig(async (merge, { command, mode }) => {
     plugins: ["@tarojs/plugin-generator"],
     defineConstants: {},
     copy: {
-      patterns: [],
+      patterns: [
+        { from: 'public/', to: 'dist/' },
+      ],
       options: {},
     },
     framework: "vue3",
