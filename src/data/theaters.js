@@ -7,7 +7,164 @@ import renminDawutaiImg from '../assets/images/renmin-dawutai.jpg'
 import beiwaitanImg from '../assets/images/beiwaitan-youbang.jpg'
 import huangpuImg from '../assets/images/huangpujuchang.jpg'
 import shanghaiMuouImg from '../assets/images/shanghaimuoujutuan.png'
-
+import sh_dongfangImg from '../assets/images/sh-dongfang.jpg'
+import sh_yihaiImg from '../assets/images/sh-yihai.jpg'
+import sh_shuyuanluImg from '../assets/images/sh-shuyuanlu.jpg'
+import sh_polyImg from '../assets/images/sh-poly.jpg'
+import sh_qianjiaoImg from '../assets/images/sh-qianjiao.jpg'
+import sh_wanpingImg from '../assets/images/sh-wanping.jpg'
+import sh_huaju_artImg from '../assets/images/sh-huaju-art.jpg'
+import sh_huangpuImg from '../assets/images/sh-huangpu.jpg'
+import sh_1933Img from '../assets/images/sh-1933.jpg'
+import sh_danceImg from '../assets/images/sh-dance.jpg'
+import sh_asia_starImg from '../assets/images/sh-asia-star.jpg'
+import sh_jiuchengImg from '../assets/images/sh-jiucheng.jpg'
+import sh_tianchangImg from '../assets/images/sh-tianchang.jpg'
+import sh_shanghai_daImg from '../assets/images/sh-shanghai-da.jpg'
+import sh_music_hallImg from '../assets/images/sh-music-hall.jpg'
+import sh_daningImg from '../assets/images/sh-daning.jpg'
+import sh_hongqiao_artImg from '../assets/images/sh-hongqiao-art.jpg'
+import sh_dongfang_musicImg from '../assets/images/sh-dongfang-music.jpg'
+import sh_intl_danceImg from '../assets/images/sh-intl-dance.jpg'
+import sh_shtxImg from '../assets/images/sh-shtx.jpg'
+import sh_xuhui_theaterImg from '../assets/images/sh-xuhui-theater.jpg'
+import sh_muou_theater_smallImg from '../assets/images/sh-muou-theater-small.jpg'
+import sh_xinguang_cinemaImg from '../assets/images/sh-xinguang-cinema.jpg'
+import sh_gongwutaiImg from '../assets/images/sh-gongwutai.jpg'
+import sh_zhongguo_theaterImg from '../assets/images/sh-zhongguo-theater.jpg'
+import sh_children_art_blackImg from '../assets/images/sh-children-art-black.jpg'
+import sh_children_art_centerImg from '../assets/images/sh-children-art-center.jpg'
+import sh_children_art_smallImg from '../assets/images/sh-children-art-small.jpg'
+import sh_grand_theater_smallImg from '../assets/images/sh-grand-theater-small.jpg'
+import sh_music_hall_smallImg from '../assets/images/sh-music-hall-small.jpg'
+import sh_huangpu_culture_bailanhuaImg from '../assets/images/sh-huangpu-culture-bailanhua.jpg'
+import sh_huangpu_culture_yalushuImg from '../assets/images/sh-huangpu-culture-yalushu.jpg'
+import sh_changjiang_redImg from '../assets/images/sh-changjiang-red.jpg'
+import sh_changjiang_blackImg from '../assets/images/sh-changjiang-black.jpg'
+import sh_yuyuan_theaterImg from '../assets/images/sh-yuyuan-theater.jpg'
+import sh_molihua_theaterImg from '../assets/images/sh-molihua-theater.jpg'
+import sh_800showImg from '../assets/images/sh-800show.jpg'
+import sh_exhibition_center_theaterImg from '../assets/images/sh-exhibition-center-theater.jpg'
+import sh_little_partner_theaterImg from '../assets/images/sh-little-partner-theater.jpg'
+import sh_shang_yan_guImg from '../assets/images/sh-shang-yan-gu.jpg'
+import sh_wenyihuitangImg from '../assets/images/sh-wenyihuitang.jpg'
+import sh_lanxin_jing_theaterImg from '../assets/images/sh-lanxin-jing-theater.jpg'
+import sh_china_welfare_theaterImg from '../assets/images/sh-china-welfare-theater.jpg'
+import sh_jingan_sportsImg from '../assets/images/sh-jingan-sports.jpg'
+import sh_sta_experimentalImg from '../assets/images/sh-sta-experimental.jpg'
+import sh_yunfeng_theaterImg from '../assets/images/sh-yunfeng-theater.jpg'
+import sh_circus_cityImg from '../assets/images/sh-circus-city.jpg'
+import sh_portman_theaterImg from '../assets/images/sh-portman-theater.jpg'
+import sh_zhanbei_teahouseImg from '../assets/images/sh-zhanbei-teahouse.jpg'
+import sh_railway_workers_palaceImg from '../assets/images/sh-railway-workers-palace.jpg'
+import sh_hubei_cinemaImg from '../assets/images/sh-hubei-cinema.jpg'
+import sh_drama_center_salonImg from '../assets/images/sh-drama-center-salon.jpg'
+import sh_drama_center_d6Img from '../assets/images/sh-drama-center-d6.jpg'
+import sh_da_theaterImg from '../assets/images/sh-da-theater.jpg'
+import sh_mass_art_hallImg from '../assets/images/sh-mass-art-hall.jpg'
+import sh_symphony_hallImg from '../assets/images/sh-symphony-hall.jpg'
+import sh_xuhui_tianlin_cultureImg from '../assets/images/sh-xuhui-tianlin-culture.jpg'
+import sh_shangyin_operaImg from '../assets/images/sh-shangyin-opera.jpg'
+import sh_xuhui_sportsImg from '../assets/images/sh-xuhui-sports.jpg'
+import sh_grand_stageImg from '../assets/images/sh-grand-stage.jpg'
+import sh_wanping_theaterImg from '../assets/images/sh-wanping-theater.jpg'
+import sh_hongkou_stadiumImg from '../assets/images/sh-hongkou-stadium.jpg'
+import sh_modernsky_labImg from '../assets/images/sh-modernsky-lab.jpg'
+import sh_quyang_cultureImg from '../assets/images/sh-quyang-culture.jpg'
+import sh_1933_microImg from '../assets/images/sh-1933-micro.jpg'
+import sh_hongkou_workersImg from '../assets/images/sh-hongkou-workers.jpg'
+import sh_xingmeng_theaterImg from '../assets/images/sh-xingmeng-theater.jpg'
+import sh_jingwu_sportsImg from '../assets/images/sh-jingwu-sports.jpg'
+import sh_zhenzhu_theaterImg from '../assets/images/sh-zhenzhu-theater.jpg'
+import sh_blue_noteImg from '../assets/images/sh-blue-note.jpg'
+import sh_changning_folk_cultureImg from '../assets/images/sh-changning-folk-culture.jpg'
+import sh_changning_art_centerImg from '../assets/images/sh-changning-art-center.jpg'
+import sh_east_hongqiao_theaterImg from '../assets/images/sh-east-hongqiao-theater.jpg'
+import sh_jiangchuan_theaterImg from '../assets/images/sh-jiangchuan-theater.jpg'
+import sh_new_dongyuanImg from '../assets/images/sh-new-dongyuan.jpg'
+import sh_pujiang_cinemaImg from '../assets/images/sh-pujiang-cinema.jpg'
+import sh_qizhong_sportsImg from '../assets/images/sh-qizhong-sports.jpg'
+import sh_wujing_cultureImg from '../assets/images/sh-wujing-culture.jpg'
+import sh_city_theaterImg from '../assets/images/sh-city-theater.jpg'
+import sh_suoshi_shengImg from '../assets/images/sh-suoshi-sheng.jpg'
+import sh_suoshi_moImg from '../assets/images/sh-suoshi-mo.jpg'
+import sh_dazero_bay_artImg from '../assets/images/sh-dazero-bay-art.jpg'
+import sh_qingpu_cultureImg from '../assets/images/sh-qingpu-culture.jpg'
+import sh_qingpu_zhaogang_cultureImg from '../assets/images/sh-qingpu-zhaogang-culture.jpg'
+import sh_qingpu_zhonggu_cinemaImg from '../assets/images/sh-qingpu-zhonggu-cinema.jpg'
+import sh_qingpu_zhujiajiao_cinemaImg from '../assets/images/sh-qingpu-zhujiajiao-cinema.jpg'
+import sh_liantang_cinemaImg from '../assets/images/sh-liantang-cinema.jpg'
+import sh_hong_hallImg from '../assets/images/sh-hong-hall.jpg'
+import sh_yongle_cinemaImg from '../assets/images/sh-yongle-cinema.jpg'
+import sh_shouwei_microImg from '../assets/images/sh-shouwei-micro.jpg'
+import sh_qing_art_spaceImg from '../assets/images/sh-qing-art-space.jpg'
+import sh_zaomeng_boxImg from '../assets/images/sh-zaomeng-box.jpg'
+import sh_young_theater_mainImg from '../assets/images/sh-young-theater-main.jpg'
+import sh_young_theater_smallImg from '../assets/images/sh-young-theater-small.jpg'
+import sh_donggong_theaterImg from '../assets/images/sh-donggong-theater.jpg'
+import sh_intl_fashion_centerImg from '../assets/images/sh-intl-fashion-center.jpg'
+import sh_mercedes_benz_arenaImg from '../assets/images/sh-mercedes-benz-arena.jpg'
+import sh_mercedes_benz_music_clubImg from '../assets/images/sh-mercedes-benz-music-club.jpg'
+import sh_nanhui_haidong_cinemaImg from '../assets/images/sh-nanhui-haidong-cinema.jpg'
+import sh_nanhui_zhoupu_cinemaImg from '../assets/images/sh-nanhui-zhoupu-cinema.jpg'
+import sh_nanhui_xuanqiao_cinemaImg from '../assets/images/sh-nanhui-xuanqiao-cinema.jpg'
+import sh_hangtou_cultureImg from '../assets/images/sh-hangtou-culture.jpg'
+import sh_pudong_sandun_cinemaImg from '../assets/images/sh-pudong-sandun-cinema.jpg'
+import sh_pudong_chuansha_cinemaImg from '../assets/images/sh-pudong-chuansha-cinema.jpg'
+import sh_nanhui_yancang_cinemaImg from '../assets/images/sh-nanhui-yancang-cinema.jpg'
+import sh_pudong_dongfang_cinemaImg from '../assets/images/sh-pudong-dongfang-cinema.jpg'
+import sh_pudong_hangtou_teahouseImg from '../assets/images/sh-pudong-hangtou-teahouse.jpg'
+import sh_nanhui_sanzao_cinemaImg from '../assets/images/sh-nanhui-sanzao-cinema.jpg'
+import sh_nanhui_datuan_yongchunImg from '../assets/images/sh-nanhui-datuan-yongchun.jpg'
+import sh_nanhui_hangtou_taoyuanchunImg from '../assets/images/sh-nanhui-hangtou-taoyuanchun.jpg'
+import sh_shangyin_dongyi_cinemaImg from '../assets/images/sh-shangyin-dongyi-cinema.jpg'
+import sh_lanxin_cinemaImg from '../assets/images/sh-lanxin-cinema.jpg'
+import sh_zhoupu_theaterImg from '../assets/images/sh-zhoupu-theater.jpg'
+import sh_wild_animal_parkImg from '../assets/images/sh-wild-animal-park.jpg'
+import sh_pudong_culture_hallImg from '../assets/images/sh-pudong-culture-hall.jpg'
+import sh_himalaya_stageImg from '../assets/images/sh-himalaya-stage.jpg'
+import sh_1862_art_centerImg from '../assets/images/sh-1862-art-center.jpg'
+import sh_oriental_art_chamberImg from '../assets/images/sh-oriental-art-chamber.jpg'
+import sh_xinchang_cultureImg from '../assets/images/sh-xinchang-culture.jpg'
+import sh_huinan_huanglu_cultureImg from '../assets/images/sh-huinan-huanglu-culture.jpg'
+import sh_zhangjiang_drama_valleyImg from '../assets/images/sh-zhangjiang-drama-valley.jpg'
+import sh_red_hallImg from '../assets/images/sh-red-hall.jpg'
+import sh_disney_grandImg from '../assets/images/sh-disney-grand.jpg'
+import sh_disney_venuesImg from '../assets/images/sh-disney-venues.jpg'
+import sh_china_art_palaceImg from '../assets/images/sh-china-art-palace.jpg'
+import sh_pudong_sanlin_cinemaImg from '../assets/images/sh-pudong-sanlin-cinema.jpg'
+import sh_qiangujingImg from '../assets/images/sh-qiangujing.jpg'
+import sh_bailemenImg from '../assets/images/sh-bailemen.jpg'
+import sh_waigaoqiao_artImg from '../assets/images/sh-waigaoqiao-art.jpg'
+import sh_guangxin_unlimitedImg from '../assets/images/sh-guangxin-unlimited.jpg'
+import sh_fengxian_gov_centerImg from '../assets/images/sh-fengxian-gov-center.jpg'
+import sh_wuqiao_peony_cinemaImg from '../assets/images/sh-wuqiao-peony-cinema.jpg'
+import sh_fengxian_nanqiao_cinemaImg from '../assets/images/sh-fengxian-nanqiao-cinema.jpg'
+import sh_huqiao_cinemaImg from '../assets/images/sh-huqiao-cinema.jpg'
+import sh_zhelin_cinemaImg from '../assets/images/sh-zhelin-cinema.jpg'
+import sh_fengxian_qiaoqiao_cinemaImg from '../assets/images/sh-fengxian-qiaoqiao-cinema.jpg'
+import sh_fengxian_qingcun_cultureImg from '../assets/images/sh-fengxian-qingcun-culture.jpg'
+import sh_jiukeshu_mainImg from '../assets/images/sh-jiukeshu-main.jpg'
+import sh_jiukeshu_smallImg from '../assets/images/sh-jiukeshu-small.jpg'
+import sh_jiukeshu_experimentalImg from '../assets/images/sh-jiukeshu-experimental.jpg'
+import sh_jiukeshu_forestImg from '../assets/images/sh-jiukeshu-forest.jpg'
+import sh_jiukeshu_waterfrontImg from '../assets/images/sh-jiukeshu-waterfront.jpg'
+import sh_baoshan_cultureImg from '../assets/images/sh-baoshan-culture.jpg'
+import sh_yihong_theaterImg from '../assets/images/sh-yihong-theater.jpg'
+import sh_baoshan_starxImg from '../assets/images/sh-baoshan-starx.jpg'
+import sh_jiading_cinemaImg from '../assets/images/sh-jiading-cinema.jpg'
+import sh_kaixinmahua_theaterImg from '../assets/images/sh-kaixinmahua-theater.jpg'
+import sh_chongming_cinemaImg from '../assets/images/sh-chongming-cinema.jpg'
+import sh_chongming_hujuImg from '../assets/images/sh-chongming-huju.jpg'
+import sh_fengyingzhou_theaterImg from '../assets/images/sh-fengyingzhou-theater.jpg'
+import sh_haichang_happy_theaterImg from '../assets/images/sh-haichang-happy-theater.jpg'
+import sh_haichang_dolphinImg from '../assets/images/sh-haichang-dolphin.jpg'
+import sh_haichang_animalImg from '../assets/images/sh-haichang-animal.jpg'
+import sh_nicheng_cinemaImg from '../assets/images/sh-nicheng-cinema.jpg'
+import sh_wanxiang_cinemaImg from '../assets/images/sh-wanxiang-cinema.jpg'
+import sh_lingang_artsImg from '../assets/images/sh-lingang-arts.jpg'
+import sh_dishui_lake_theaterImg from '../assets/images/sh-dishui-lake-theater.jpg'
+import sh_poly_yunjianImg from '../assets/images/sh-poly-yunjian.jpg'
 // 座位区段数据生成
 function buildSections(config) {
   return config.map(s => ({
@@ -162,7 +319,7 @@ export const THEATERS = [
   // 上海中型剧场
   {
     id: 'sh_dongfang', name: '上海东方艺术中心·歌剧厅', cityId: 'shanghai',
-    cover: 'https://bkimg.cdn.bcebos.com/smart/902397dda144ad3487f43b3dd6a20cf430ad85c5-bkimg-process,v_1,rw_378,rh_252,maxl_756',
+    cover: sh_dongfangImg,
     address: '上海市浦东新区丁香路425号', rating: 4.7, reviewCount: 743,
     tags: ['音乐剧', '歌剧', '浦东地标'],
     description: '东方艺术中心由法国建筑师保罗·安德鲁设计，外形酷似盛开的蝴蝶兰。歌剧厅共1020座，赖声川《如梦之梦》《暗恋桃花源》均在此演出。',
@@ -188,7 +345,7 @@ export const THEATERS = [
   },
   {
     id: 'sh_yihai', name: '艺海剧院·大剧场', cityId: 'shanghai',
-    cover: 'https://bkimg.cdn.bcebos.com/pic/0e2442a7d933c895d143d76c864864f082025aafaa2b',
+    cover: sh_yihaiImg,
     address: '上海市长宁区天山路41号', rating: 4.6, reviewCount: 512,
     tags: ['话剧', '孟京辉驻演', '商业剧场'],
     description: '艺海剧院共设大小两个剧场，大剧场999座。孟京辉将5楼小剧场长租为驻演剧院，每年逾200场演出，是上海商业话剧最活跃的场所之一。',
@@ -219,7 +376,7 @@ export const THEATERS = [
   },
   {
     id: 'sh_shuyuanlu', name: '上海音乐学院·上音歌剧院', cityId: 'shanghai',
-    cover: 'https://bkimg.cdn.bcebos.com/pic/d009b3de9c82d158ccbfafac4c500ed8bc3eb135e421',
+    cover: sh_shuyuanluImg,
     address: '上海市徐汇区汾阳路20号', rating: 4.8, reviewCount: 389,
     tags: ['歌剧', '古典乐', '上音附属'],
     description: '上海音乐学院旗下国际级歌剧院，声学设计达国际顶尖水准，是近年上海歌剧和精品音乐剧的重要演出场所，常吸引世界级演出团体。',
@@ -233,7 +390,7 @@ export const THEATERS = [
   },
   {
     id: 'sh_poly', name: '上海保利大剧院', cityId: 'shanghai',
-    cover: 'https://bkimg.cdn.bcebos.com/pic/80cb39dbb6fd5266d0162d72344e802bd40735fa9805',
+    cover: sh_polyImg,
     address: '上海市嘉定区白银路159号', rating: 4.7, reviewCount: 478,
     tags: ['歌剧', '音乐会', '水景剧场'],
     description: '国内首家拥有水景剧场的剧院，总建筑面积5.6万平方米。大剧场1466座，另有400座小剧场及屋顶剧场，毗邻F1赛道，交通独特。',
@@ -251,7 +408,7 @@ export const THEATERS = [
   },
   {
     id: 'sh_qianjiao', name: '前滩31演艺中心·大剧场', cityId: 'shanghai',
-    cover: 'https://dimg04.c-ctrip.com/images/0104s120009ignyt10400.jpg',
+    cover: sh_qianjiaoImg,
     address: '上海市浦东新区高青西路777号', rating: 4.7, reviewCount: 356,
     tags: ['音乐剧', '浦东新地标', '前滩'],
     description: '前滩31演艺中心是上海浦东又一重要演艺地标，位于前滩国际商务区，交通便利，近年引进多部优质音乐剧和话剧演出。',
@@ -264,7 +421,7 @@ export const THEATERS = [
   },
   {
     id: 'sh_wanping', name: '宛平剧院', cityId: 'shanghai',
-    cover: 'https://bkimg.cdn.bcebos.com/smart/b8014a90f603738da977d34ab047a751f8198618461c-bkimg-process,v_1,rw_286,rh_252,maxl_573',
+    cover: sh_wanpingImg,
     address: '中山南二路859号', rating: 4.6, reviewCount: 298,
     tags: ['戏曲', '话剧', '徐汇'],
     description: '宛平剧院与长江剧场同属上海大型综合性演出场所，2025演出季联合推出180台480场演出，横跨戏曲、曲艺、舞剧、话剧、脱口秀等多品类。',
@@ -302,7 +459,7 @@ export const THEATERS = [
 
   {
     id: 'sh_huaju_art', name: '上海话剧艺术中心·艺术剧院', cityId: 'shanghai',
-    cover: 'https://bkimg.cdn.bcebos.com/smart/f31fbe096b63f62481125bbb8144ebf81a4ca33f-bkimg-process,v_1,rw_644,rh_500,maxl_800',
+    cover: sh_huaju_artImg,
     address: '上海市徐汇区安福路288号', rating: 4.8, reviewCount: 1124,
     tags: ['话剧', '安福路', '精品剧场'],
     description: '上海话剧艺术中心是全国最重要的话剧制作与演出机构之一。安福路大楼内设三个剧场：1F艺术剧院530座，3楼和6楼各有小剧场200-300座，全年演出超400场。',
@@ -319,7 +476,7 @@ export const THEATERS = [
   },
   {
     id: 'sh_huangpu', name: '黄浦剧场', cityId: 'shanghai',
-    cover: 'https://dimg04.c-ctrip.com/images/1mh5m12000nqliki2DF9B.jpg',
+    cover: sh_huangpuImg,
     address: '上海市黄浦区北京东路663号', rating: 4.5, reviewCount: 312,
     tags: ['话剧', '黑匣子', '实验戏剧'],
     description: '黄浦剧场内设中剧场与黑匣子剧场两个演出空间，中剧场上演话剧，黑匣子剧场专注实验/非职业戏剧，是上海话剧生态的重要组成部分。',
@@ -335,7 +492,7 @@ export const THEATERS = [
   },
   {
     id: 'sh_1933', name: '1933老场坊·空中剧院', cityId: 'shanghai',
-    cover: 'https://bkimg.cdn.bcebos.com/pic/dbb44aed2e738bd4d9671a4fab8b87d6277ff90e',
+    cover: sh_1933Img,
     address: '上海市虹口区溧阳路611号', rating: 4.7, reviewCount: 445,
     tags: ['实验戏剧', '历史建筑', '工业风'],
     description: '1933老场坊是由1933年建成的工部局宰牲场改造而成的创意空间，4楼空中剧院共531座，建筑本身即是艺术品，极具沉浸感，常举办先锋/实验演出。',
@@ -346,7 +503,7 @@ export const THEATERS = [
   },
   {
     id: 'sh_dance', name: '上海舞蹈中心·大剧场', cityId: 'shanghai',
-    cover: 'https://bkimg.cdn.bcebos.com/smart/cf1b9d16fdfaaf51635a4ca0845494eef01f7a70-bkimg-process,v_1,rw_447,rh_252,maxl_895',
+    cover: sh_danceImg,
     address: '上海市长宁区虹桥路1650号', rating: 4.8, reviewCount: 367,
     tags: ['舞蹈', '芭蕾', '现代舞'],
     description: '上海舞蹈中心是为舞蹈表演量身定制的专业场所，大小两个剧场。大剧场约600座，凭借精准的舞台设计和亲密的观演关系，是国内外顶级舞蹈团体的首选演出地。',
@@ -359,7 +516,7 @@ export const THEATERS = [
   // 演艺新空间 / 沉浸式剧场
   {
     id: 'sh_asia_star', name: '亚洲大厦·Star Theatre', cityId: 'shanghai',
-    cover: 'https://inews.gtimg.com/news_bt/OpG7ScGQ8oQVPaRZTgqnBlM0I0wUmiTbKrFulI2a9AOVEAA/641',
+    cover: sh_asia_starImg,
     address: '上海市静安区南京西路1600号亚洲大厦', rating: 4.7, reviewCount: 892,
     tags: ['沉浸式', '驻演小剧场', '音乐剧'],
     description: '亚洲大厦是全国演艺新空间的标杆性范本，楼内设有多个小剧场同步驻演，《阿波罗尼亚》是中国首个环境式驻演小剧场音乐剧，每日多场，成为上海独特的演艺地标。',
@@ -375,7 +532,7 @@ export const THEATERS = [
   },
   {
     id: 'sh_jiucheng', name: '久事·上海商城剧院', cityId: 'shanghai',
-    cover: 'https://dimg04.c-ctrip.com/images/1mh4p12000nqlsspeF4E8.jpg',
+    cover: sh_jiuchengImg,
     address: '上海市静安区南京西路1376号4楼', rating: 4.6, reviewCount: 234,
     tags: ['话剧', '音乐剧', '国际氛围'],
     description: '久事上海商城剧院位于南京西路商圈，是一个拥有400余座的中型剧场，曾是上海最早接轨国际演出的场所之一，常有国际驻演剧目上演。',
@@ -386,7 +543,7 @@ export const THEATERS = [
   },
   {
     id: 'sh_tianchang', name: '天蟾逸夫舞台', cityId: 'shanghai',
-    cover: 'https://bkimg.cdn.bcebos.com/pic/1b4c510fd9f9d72a6059c15286713f34349b033b0d72',
+    cover: sh_tianchangImg,
     address: '上海市黄浦区福州路701号', rating: 4.6, reviewCount: 456,
     tags: ['京剧', '昆曲', '百年剧院'],
     description: '天蟾逸夫舞台是上海历史最悠久的戏曲剧场之一，共约1200座，是上海京剧、昆曲等传统戏曲的核心演出场所，梅兰芳等大师都曾在此登台。',
@@ -399,7 +556,7 @@ export const THEATERS = [
   },
   {
     id: 'sh_shanghai_da', name: '上海大剧院·中剧场', cityId: 'shanghai',
-    cover: 'https://bkimg.cdn.bcebos.com/pic/86d6277f9e2f0708c74a39a0ea24b899a801f2c7',
+    cover: sh_shanghai_daImg,
     address: '上海市黄浦区人民大道300号', rating: 4.7, reviewCount: 398,
     tags: ['戏曲', '室内乐', '中型演出'],
     description: '上海大剧院中剧场约550座，与大剧场共处一楼，主要上演地方戏曲、室内乐和中小型话剧。精致的空间感令演员与观众关系更为亲密。',
@@ -412,7 +569,7 @@ export const THEATERS = [
   // 上海更多中大型剧场
   {
     id: 'sh_music_hall', name: '凯迪拉克·上海音乐厅', cityId: 'shanghai',
-    cover: 'https://bkimg.cdn.bcebos.com/smart/9a1151c2c1dad878e4dd3b22-bkimg-process,v_1,rw_1600,rh_1009,maxl_800',
+    cover: sh_music_hallImg,
     address: '上海市黄浦区延安东路523号', rating: 4.8, reviewCount: 567,
     tags: ['古典乐', '室内乐', '历史建筑'],
     description: '1930年建成，2004年整体平移66.46米并修缮，是上海现存最古老的现代建筑之一。共1185座，以精湛的自然混响著称，是上海古典音乐演出最重要的圣地。',
@@ -424,21 +581,8 @@ export const THEATERS = [
     ])}],
   },
   {
-    id: 'sh_yifu', name: '上海逸夫舞台', cityId: 'shanghai',
-    cover: 'https://bkimg.cdn.bcebos.com/pic/b219ebc4b74543a98226f21817094f36acaf9958',
-    address: '上海市黄浦区汉口路439号', rating: 4.7, reviewCount: 412,
-    tags: ['京剧', '昆曲', '经典戏曲'],
-    description: '1995年开放，共1024座，是上海京剧团、上海昆剧团的重要驻场演出地，多次荣获"上海市民最喜爱的演出场所"称号，与天蟾逸夫舞台并称上海戏曲双雄。',
-    transport: '地铁1/2/8号线人民广场站步行约10分钟', phone: '021-63511806',
-    halls: [{ id: 'h1', name: '主剧场', capacity: 1024, sections: buildSections([
-      { id: 'A', name: '池座前区', type: 'orchestra', rows: 12, seatsPerRow: 30 },
-      { id: 'B', name: '池座后区', type: 'orchestra', rows: 10, seatsPerRow: 32 },
-      { id: 'C', name: '楼座', type: 'mezzanine', rows: 5, seatsPerRow: 34 },
-    ])}],
-  },
-  {
     id: 'sh_daning', name: '大宁剧院·大剧场', cityId: 'shanghai',
-    cover: 'https://bkimg.cdn.bcebos.com/smart/71cf3bc79f3df8dcbc45ef2ccd11728b47102816-bkimg-process,v_1,rw_600,rh_400,maxl_800',
+    cover: sh_daningImg,
     address: '上海市静安区共和新路1188号', rating: 4.6, reviewCount: 389,
     tags: ['话剧', '音乐剧', '静安'],
     description: '大宁剧院大剧场1009座，是上海北部最活跃的商业演出场所，年演出超300场，毗邻大宁灵石公园，停车便捷。',
@@ -463,7 +607,7 @@ export const THEATERS = [
  // },
   {
     id: 'sh_hongqiao_art', name: '虹桥艺术中心·大剧场', cityId: 'shanghai',
-    cover: 'https://dimg04.c-ctrip.com/images/1mh5r12000c4wl1lo0A6E.jpg',
+    cover: sh_hongqiao_artImg,
     address: '上海市闵行区申贵路555号', rating: 4.6, reviewCount: 234,
     tags: ['综合演出', '闵行', '家庭亲子'],
     description: '虹桥艺术中心含大中小三个剧场，大剧场1400座，常举办儿童剧、综艺演出及中型商业话剧，是上海西南区域重要的演出目的地，交通紧邻虹桥枢纽。',
@@ -476,7 +620,7 @@ export const THEATERS = [
   },
   {
     id: 'sh_dongfang_music', name: '上海东方艺术中心·音乐厅', cityId: 'shanghai',
-    cover: 'https://bkimg.cdn.bcebos.com/smart/d50735fae6cd7b89c92f8839092442a7d8330ecc-bkimg-process,v_1,rw_1280,rh_852,maxl_800',
+    cover: sh_dongfang_musicImg,
     address: '上海市浦东新区丁香路425号', rating: 4.8, reviewCount: 523,
     tags: ['交响乐', '室内乐', '葡萄园式'],
     description: '东方艺术中心音乐厅共1954座，采用葡萄园式座位排列，观众360度环绕舞台，声学效果极为出色。与歌剧厅并称，是上海顶级交响乐演出的首要场地。',
@@ -490,7 +634,7 @@ export const THEATERS = [
   },
   {
     id: 'sh_intl_dance', name: '上海国际舞蹈中心', cityId: 'shanghai',
-    cover: 'https://bkimg.cdn.bcebos.com/smart/3c6d55fbb2fb4316698f646428a4462309f7d31f-bkimg-process,v_1,rw_447,rh_252,maxl_895',
+    cover: sh_intl_danceImg,
     address: '上海市长宁区虹桥路1650号', rating: 4.7, reviewCount: 289,
     tags: ['舞蹈', '现代舞', '国际演出'],
     description: '上海国际舞蹈中心与上海舞蹈中心相邻，是全国规模最大、功能最完备的专业舞蹈场馆之一。大剧场1200座，小剧场300座，是顶级国际舞蹈团体的首选演出地。',
@@ -528,7 +672,7 @@ export const THEATERS = [
  // },
   {
     id: 'sh_shtx', name: '上海戏剧学院·端钧剧场', cityId: 'shanghai',
-    cover: 'https://bkimg.cdn.bcebos.com/pic/f9dcd100baa1cd11728bba6208b30f2443a70f56',
+    cover: sh_shtxImg,
     address: '上海市静安区华山路630号', rating: 4.7, reviewCount: 334,
     tags: ['话剧', '学院派', '实验戏剧'],
     description: '上海戏剧学院端钧剧场是上戏的旗舰演出空间，约440座，汇集全国最优秀的戏剧学院演出和实验先锋剧目。上戏还设有实验剧场（200座）和黑匣子剧场（100座）。',
@@ -545,7 +689,7 @@ export const THEATERS = [
   },
   {
     id: 'sh_xuhui_theater', name: '徐汇艺术馆·大剧场', cityId: 'shanghai',
-    cover: 'https://dimg04.c-ctrip.com/images/1mh4p12000c4wiqkb4BFD.jpg',
+    cover: sh_xuhui_theaterImg,
     address: '上海市徐汇区漕溪北路595号', rating: 4.5, reviewCount: 178,
     tags: ['话剧', '音乐会', '徐汇'],
     description: '徐汇艺术馆大剧场约800座，是徐汇区重要的综合性演出场所，常举办中型话剧、音乐会及地方戏曲演出，毗邻上海体育馆，交通便利。',
@@ -562,155 +706,155 @@ export const THEATERS = [
       cover: shanghaiMuouImg,
       address: "上海市南京西路388号五楼" },                                                        
     { id: "sh_muou_theater_small", name: "上海木偶剧团（小剧场）", cityId: "shanghai", 
-      cover: 'https://static-pc.shcstheatre.com/webcontent/img/01_maintheatre.jpg', 
+      cover: sh_muou_theater_smallImg, 
       address: "上海市南京西路388号五楼" },
     { id: "sh_xinguang_cinema", name: "上海新光影艺苑", cityId: "shanghai", 
-      cover: 'https://static-pc.shcstheatre.com/webcontent/img/01_maintheatre.jpg', 
+      cover: sh_xinguang_cinemaImg, 
       address: "上海市黄浦区宁波路586号" },
     { id: "sh_gongwutai", name: "上海共舞台", cityId: "shanghai", 
-      cover: 'https://static-pc.shcstheatre.com/webcontent/img/01_maintheatre.jpg', 
+      cover: sh_gongwutaiImg, 
       address: "延安东路433号" },
     { id: "sh_zhongguo_theater", name: "上海中国大戏院", cityId: "shanghai", 
-      cover: 'https://static-pc.shcstheatre.com/webcontent/img/01_maintheatre.jpg', 
+      cover: sh_zhongguo_theaterImg, 
       address: "上海市黄浦区牛庄路704号" },
-    { "id": "sh_luwan_sports", "name": "上海市卢湾体育中心", "cityId": "shanghai", 
-      cover: 'https://static-pc.shcstheatre.com/webcontent/img/01_maintheatre.jpg',
+    { "id": "sh_luwan_sports", "name": "上海市卢湾体育中心", "cityId": "shanghai",
+      cover: sh_luwan_sportsImg,
       "address": "肇嘉浜路128号" },
     { "id": "sh_children_art_black", "name": "上海儿童艺术剧场-黑匣子剧场", "cityId": "shanghai",
-      cover: 'https://static-pc.shcstheatre.com/webcontent/img/01_maintheatre.jpg',
+      cover: sh_children_art_blackImg,
        "address": "上海市黄浦区苗江路800号" },
-    { "id": "sh_children_art_center", "name": "上海儿童艺术剧场-中心剧场", "cityId": "shanghai", "address": "上海市黄浦区苗江路800号" },
-    { "id": "sh_children_art_small", "name": "上海儿童艺术剧场-小剧场", "cityId": "shanghai", "address": "上海市黄浦区苗江路800号" },
-    { "id": "sh_grand_theater_small", "name": "上海大剧院-小剧场", "cityId": "shanghai", "address": "人民大道300号" },
-    { "id": "sh_music_hall_small", "name": "上海音乐厅小剧场", "cityId": "shanghai", "address": "黄浦区延安东路523号" },
-    { "id": "sh_huangpu_culture_bailanhua", "name": "上海市黄浦区文化馆-白玉兰剧场", "cityId": "shanghai", "address": "重庆南路308号" },
-    { "id": "sh_huangpu_culture_yalushu", "name": "上海市黄浦区文化馆-雅庐书场", "cityId": "shanghai", "address": "重庆南路308号" },
-    { "id": "sh_changjiang_red", "name": "上海长江剧场（红匣子）", "cityId": "shanghai", "address": "上海市黄浦区黄河路35号" },
-    { "id": "sh_changjiang_black", "name": "上海长江剧场（黑匣子）", "cityId": "shanghai", "address": "上海市黄浦区黄河路35号" },
-    { "id": "sh_yuyuan_theater", "name": "上海豫园海上梨园小剧场", "cityId": "shanghai", "address": "上海市黄浦区文昌路10号4楼A" },
-    { "id": "sh_molihua_theater", "name": "茉莉花剧场", "cityId": "shanghai", "address": "上海市黄浦区北海路247号1幢" },
-    { "id": "sh_800show", "name": "800秀剧场", "cityId": "shanghai", "address": "常德路800号8幢101室" },
-    { "id": "sh_exhibition_center_theater", "name": "上展中心剧院", "cityId": "shanghai", "address": "延安中路1000号" },
-    { "id": "sh_little_partner_theater", "name": "上海小伙伴剧场", "cityId": "shanghai", "address": "延安西路64号11幢4层、5层" },
-    { "id": "sh_shang_yan_gu", "name": "尚演谷", "cityId": "shanghai", "address": "北京西路1013号" },
-    { "id": "sh_wenyihuitang", "name": "文艺会堂", "cityId": "shanghai", "address": "延安西路200号" },
-    { "id": "sh_lanxin_jing_theater", "name": "兰馨影业-光影车间.静剧场", "cityId": "shanghai", "address": "乌鲁木齐北路459号3幢101室" },
-    { "id": "sh_china_welfare_theater", "name": "中国福利会儿童艺术剧院(马兰花剧场)", "cityId": "shanghai", "address": "华山路643号" },
-    { "id": "sh_jingan_sports", "name": "静安体育中心", "cityId": "shanghai", "address": "汶水路116号" },
-    { "id": "sh_sta_experimental", "name": "上戏实验剧院", "cityId": "shanghai", "address": "华山路630号" },
-    { "id": "sh_yunfeng_theater", "name": "云峰剧院", "cityId": "shanghai", "address": "北京西路1700号" },
-    { "id": "sh_circus_city", "name": "上海马戏城", "cityId": "shanghai", "address": "共和新路2266号" },
-    { "id": "sh_portman_theater", "name": "上海商城剧院", "cityId": "shanghai", "address": "南京西路1376号" },
-    { "id": "sh_zhanbei_teahouse", "name": "上海市闸北区宋园茶艺馆（书场）", "cityId": "shanghai", "address": "共和新路1667号" },
-    { "id": "sh_railway_workers_palace", "name": "上海铁路工人文化宫", "cityId": "shanghai", "address": "虬江路1150号" },
-    { "id": "sh_hubei_cinema", "name": "上海市沪北电影院", "cityId": "shanghai", "address": "洛川东路500号" },
-    { "id": "sh_drama_center_salon", "name": "上海话剧艺术中心-戏剧沙龙", "cityId": "shanghai", "address": "安福路288号" },
-    { "id": "sh_drama_center_d6", "name": "上海话剧艺术中心-D6空间", "cityId": "shanghai", "address": "安福路288号" },
-    { "id": "sh_da_theater", "name": "上海大戏院", "cityId": "shanghai", "address": "复兴中路1186号1幢" },
-    { "id": "sh_mass_art_hall", "name": "上海市群众艺术馆", "cityId": "shanghai", "address": "中山西路1551号" },
-    { "id": "sh_symphony_hall", "name": "上海交响乐团音乐厅", "cityId": "shanghai", "address": "复兴中路1380号" },
-    { "id": "sh_xuhui_tianlin_culture", "name": "徐汇区田林街道社区文化活动中心", "cityId": "shanghai", "address": "田林东路588号" },
-    { "id": "sh_shangyin_opera", "name": "上音歌剧院", "cityId": "shanghai", "address": "汾阳路6号" },
-    { "id": "sh_xuhui_sports", "name": "徐汇体育公园", "cityId": "shanghai", "address": "天钥桥路666号" },
-    { "id": "sh_grand_stage", "name": "上海大舞台", "cityId": "shanghai", "address": "漕溪北路1111号" },
-    { "id": "sh_wanping_theater", "name": "上海市宛平艺苑", "cityId": "shanghai", "address": "中山南二路859号" },
-    { "id": "sh_hongkou_stadium", "name": "虹口足球场", "cityId": "shanghai", "address": "东江湾路444号" },
-    { "id": "sh_modernsky_lab", "name": "摩登天空LAB", "cityId": "shanghai", "address": "瑞虹路188号309、310、507室" },
-    { "id": "sh_quyang_culture", "name": "虹口区曲阳文化馆", "cityId": "shanghai", "address": "曲阳路570号" },
-    { "id": "sh_1933_micro", "name": "1933微剧场", "cityId": "shanghai", "address": "沙泾路10号1号楼447幢201室" },
-    { "id": "sh_hongkou_workers", "name": "虹口区工人文化宫", "cityId": "shanghai", "address": "飞虹路528号" },
-    { "id": "sh_xingmeng_theater", "name": "星梦剧场", "cityId": "shanghai", "address": "嘉兴路267号1楼A区" },
-    { "id": "sh_jingwu_sports", "name": "精武体育馆", "cityId": "shanghai", "address": "东体育会路715号" },
-    { "id": "sh_zhenzhu_theater", "name": "珍珠剧场", "cityId": "shanghai", "address": "乍浦路471号" },
-    { "id": "sh_blue_note", "name": "Blue Note Shanghai", "cityId": "shanghai", "address": "四川北路867号301室" },
-    { "id": "sh_changning_folk_culture", "name": "上海市长宁民俗文化中心", "cityId": "shanghai", "address": "天山西路201号" },
-    { "id": "sh_changning_art_center", "name": "上海市长宁文化艺术中心", "cityId": "shanghai", "address": "仙霞路650号" },
-    { "id": "sh_east_hongqiao_theater", "name": "上海东虹桥剧院", "cityId": "shanghai", "address": "天山路888号1层—C" },
-    { "id": "sh_jiangchuan_theater", "name": "江川剧场", "cityId": "shanghai", "address": "江川路344号三层" },
-    { "id": "sh_new_dongyuan", "name": "上海新东苑", "cityId": "shanghai", "address": "金光路225号第3层" },
-    { "id": "sh_pujiang_cinema", "name": "新浦江影剧院", "cityId": "shanghai", "address": "浦江镇谈家港叶家桥路288号" },
-    { "id": "sh_qizhong_sports", "name": "旗忠森林体育城", "cityId": "shanghai", "address": "光华路2118号C-117" },
-    { "id": "sh_wujing_culture", "name": "吴泾文化馆", "cityId": "shanghai", "address": "龙吴路5533号" },
-    { "id": "sh_city_theater", "name": "上海城市剧院", "cityId": "shanghai", "address": "都市路4889号" },
-    { "id": "sh_suoshi_sheng", "name": "索石生剧场", "cityId": "shanghai", "address": "七莘路1366号2幢201、203室" },
-    { "id": "sh_suoshi_mo", "name": "索石墨剧场", "cityId": "shanghai", "address": "七莘路1366号2幢211室" },
-    { "id": "sh_dazero_bay_art", "name": "大零号湾文化艺术中心", "cityId": "shanghai", "address": "虹梅南路5669号" },
-    { "id": "sh_qingpu_culture", "name": "上海市青浦区文化馆", "cityId": "shanghai", "address": "公园路78号" },
-    { "id": "sh_qingpu_zhaogang_culture", "name": "青浦区赵巷镇文化中心站", "cityId": "shanghai", "address": "赵巷镇赵中路28号" },
-    { "id": "sh_qingpu_zhonggu_cinema", "name": "青浦重固影剧院", "cityId": "shanghai", "address": "重固镇通波塘西街28号" },
-    { "id": "sh_qingpu_zhujiajiao_cinema", "name": "青浦朱家角影剧院", "cityId": "shanghai", "address": "朱家角镇新溪路18号" },
-    { "id": "sh_liantang_cinema", "name": "练塘影剧院", "cityId": "shanghai", "address": "练塘镇练新路99号" },
-    { "id": "sh_hong_hall", "name": "虹馆", "cityId": "shanghai", "address": "崧泽大道333号EH馆" },
-    { "id": "sh_yongle_cinema", "name": "永乐影院2店", "cityId": "shanghai", "address": "崧文南路169弄27号301室" },
-    { "id": "sh_shouwei_micro", "name": "首位亲子微剧场", "cityId": "shanghai", "address": "嘉松中路6200号1幢3层-A-001、002、003" },
-    { "id": "sh_qing_art_space", "name": "青·当代艺术空间", "cityId": "shanghai", "address": "朱家角镇课植园路599弄36号" },
-    { "id": "sh_zaomeng_box", "name": "造梦盒子", "cityId": "shanghai", "address": "青浦区徐泾镇崧泽大道2229弄66号L3-13" },
-    { "id": "sh_young_theater_main", "name": "YOUNG剧场-大剧院", "cityId": "shanghai", "address": "控江路1155号" },
-    { "id": "sh_young_theater_small", "name": "YOUNG剧场-小剧院", "cityId": "shanghai", "address": "控江路1155号" },
-    { "id": "sh_donggong_theater", "name": "东宫剧院", "cityId": "shanghai", "address": "平凉路1500号" },
-    { "id": "sh_intl_fashion_center", "name": "上海国际时尚中心", "cityId": "shanghai", "address": "杨树浦路2866号" },
-    { "id": "sh_mercedes_benz_arena", "name": "梅赛德斯-奔驰文化中心", "cityId": "shanghai", "address": "世博大道1200号" },
-    { "id": "sh_mercedes_benz_music_club", "name": "梅赛德斯-奔驰文化中心-音乐俱乐部", "cityId": "shanghai", "address": "世博大道1200号" },
-    { "id": "sh_nanhui_haidong_cinema", "name": "南汇海东影剧院", "cityId": "shanghai", "address": "东海镇盐朝公路869号" },
-    { "id": "sh_nanhui_zhoupu_cinema", "name": "上海南汇周浦影剧场", "cityId": "shanghai", "address": "周浦镇年家浜路341号" },
-    { "id": "sh_nanhui_xuanqiao_cinema", "name": "南汇宣桥镇影剧院", "cityId": "shanghai", "address": "宣桥镇六奉公路236号" },
-    { "id": "sh_hangtou_culture", "name": "航头镇文化中心", "cityId": "shanghai", "address": "航头镇航鹤路388号B幢" },
-    { "id": "sh_pudong_sandun_cinema", "name": "上海浦东新区三墩影剧院", "cityId": "shanghai", "address": "大团镇洪通路41号" },
-    { "id": "sh_pudong_chuansha_cinema", "name": "上海浦东新区川沙影剧院", "cityId": "shanghai", "address": "川沙镇新川路400号" },
-    { "id": "sh_nanhui_yancang_cinema", "name": "南汇盐仓影剧院", "cityId": "shanghai", "address": "祝桥镇沿路街53号" },
-    { "id": "sh_pudong_dongfang_cinema", "name": "上海浦东新区东方电影院", "cityId": "shanghai", "address": "惠南镇人民西路2号" },
-    { "id": "sh_pudong_hangtou_teahouse", "name": "上海市浦东新区航头镇书场茶馆", "cityId": "shanghai", "address": "航头镇镇下沙街163号" },
-    { "id": "sh_nanhui_sanzao_cinema", "name": "南汇三灶影剧院", "cityId": "shanghai", "address": "浦东新区三灶镇" },
-    { "id": "sh_nanhui_datuan_yongchun", "name": "上海市南汇大团镇永春演艺厅", "cityId": "shanghai", "address": "大团镇永春东路100号二楼" },
-    { "id": "sh_nanhui_hangtou_taoyuanchun", "name": "上海市南汇航头镇陶园春演艺厅", "cityId": "shanghai", "address": "航头镇下沙街227号" },
-    { "id": "sh_shangyin_dongyi_cinema", "name": "上海尚银东艺数字影城", "cityId": "shanghai", "address": "浦东新区华佗路280弄31号" },
-    { "id": "sh_lanxin_cinema", "name": "兰馨影戏苑", "cityId": "shanghai", "address": "张杨路400号" },
-    { "id": "sh_zhoupu_theater", "name": "周浦剧院", "cityId": "shanghai", "address": "周东路266号西一楼" },
-    { "id": "sh_wild_animal_park", "name": "上海野生动物园", "cityId": "shanghai", "address": "宣桥镇南六公路178号" },
-    { "id": "sh_pudong_culture_hall", "name": "浦东新区浦东文化馆", "cityId": "shanghai", "address": "浦东大道143号" },
-    { "id": "sh_himalaya_stage", "name": "喜玛拉雅·大观舞台", "cityId": "shanghai", "address": "芳甸路1188弄1号" },
-    { "id": "sh_1862_art_center", "name": "1862时尚艺术中心一号仓", "cityId": "shanghai", "address": "滨江大道1777号" },
-    { "id": "sh_oriental_art_chamber", "name": "上海东方艺术中心-演奏厅", "cityId": "shanghai", "address": "丁香路425号" },
-    { "id": "sh_xinchang_culture", "name": "新场镇文化活动中心", "cityId": "shanghai", "address": "新场镇新环东路276号" },
-    { "id": "sh_huinan_huanglu_culture", "name": "惠南镇黄路社区文化艺术中心", "cityId": "shanghai", "address": "惠南镇川南奉公路6193号" },
-    { "id": "sh_zhangjiang_drama_valley", "name": "张江戏剧谷", "cityId": "shanghai", "address": "张江路69号" },
-    { "id": "sh_red_hall", "name": "红厅", "cityId": "shanghai", "address": "世博大道1500号" },
-    { "id": "sh_disney_grand", "name": "迪士尼-大剧院", "cityId": "shanghai", "address": "申迪西路255弄800号" },
-    { "id": "sh_disney_venues", "name": "迪士尼-凡迭戈剧院、林间剧场、故事舞台", "cityId": "shanghai", "address": "申迪西路255弄140号、305号、401号" },
-    { "id": "sh_china_art_palace", "name": "中华艺术宫", "cityId": "shanghai", "address": "上南路161号" },
-    { "id": "sh_pudong_sanlin_cinema", "name": "上海浦东新区三林影剧院", "cityId": "shanghai", "address": "杨思镇杨新路60号" },
-    { "id": "sh_qiangujing", "name": "上海千古情", "cityId": "shanghai", "address": "世博大道1750号" },
-    { "id": "sh_bailemen", "name": "上海百乐门", "cityId": "shanghai", "address": "" },
-    { "id": "sh_waigaoqiao_art", "name": "外高桥艺术中心", "cityId": "shanghai", "address": "张杨北路3207号" },
-    { "id": "sh_guangxin_unlimited", "name": "光新无限演艺中心", "cityId": "shanghai", "address": "华池路10号1层140室" },
-    { "id": "sh_fengxian_gov_center", "name": "上海市奉贤区机关服务中心", "cityId": "shanghai", "address": "解放东路928号" },
-    { "id": "sh_wuqiao_peony_cinema", "name": "上海邬桥牡丹影剧院", "cityId": "shanghai", "address": "大叶公路259号" },
-    { "id": "sh_fengxian_nanqiao_cinema", "name": "奉贤区南桥影剧院", "cityId": "shanghai", "address": "南桥镇南桥路333号" },
-    { "id": "sh_huqiao_cinema", "name": "上海胡桥影剧院", "cityId": "shanghai", "address": "柘林镇胡桥社区文化路45号" },
-    { "id": "sh_zhelin_cinema", "name": "上海柘林影剧院", "cityId": "shanghai", "address": "柘林新街（钦林北路31号）" },
-    { "id": "sh_fengxian_qiaoqiao_cinema", "name": "上海奉贤钱桥影剧院", "cityId": "shanghai", "address": "钱桥社区文化路8号" },
-    { "id": "sh_fengxian_qingcun_culture", "name": "奉贤县青村文化站", "cityId": "shanghai", "address": "青村镇西街5号（人民路15号）" },
-    { "id": "sh_jiukeshu_main", "name": "上海九棵树未来艺术中心—大剧场", "cityId": "shanghai", "address": "树桓路99号" },
-    { "id": "sh_jiukeshu_small", "name": "上海九棵树未来艺术中心—小剧场", "cityId": "shanghai", "address": "树桓路99号" },
-    { "id": "sh_jiukeshu_experimental", "name": "上海九棵树未来艺术中心—实验剧场", "cityId": "shanghai", "address": "树桓路99号" },
-    { "id": "sh_jiukeshu_forest", "name": "上海九棵树未来艺术中心—森林剧场", "cityId": "shanghai", "address": "树桓路99号" },
-    { "id": "sh_jiukeshu_waterfront", "name": "上海九棵树未来艺术中心—水岸舞台", "cityId": "shanghai", "address": "树桓路99号" },
-    { "id": "sh_baoshan_culture", "name": "宝山区文化馆", "cityId": "shanghai", "address": "牡丹江路1760号" },
-    { "id": "sh_yihong_theater", "name": "依弘剧场", "cityId": "shanghai", "address": "蕰川路6号30幢" },
-    { "id": "sh_baoshan_starx", "name": "上海宝山星轶STARX影剧院", "cityId": "shanghai", "address": "沪太路1933号[K]区2层202" },
-    { "id": "sh_jiading_cinema", "name": "嘉定影剧院", "cityId": "shanghai", "address": "城中路149号" },
-    { "id": "sh_kaixinmahua_theater", "name": "开心麻花剧场", "cityId": "shanghai", "address": "陈翔公路2299号3层03-33、03-34" },
-    { "id": "sh_chongming_cinema", "name": "崇明影剧院", "cityId": "shanghai", "address": "崇明城内八一路488号" },
-    { "id": "sh_chongming_huju", "name": "崇明县沪剧团", "cityId": "shanghai", "address": "城桥镇川心街1号" },
-    { "id": "sh_fengyingzhou_theater", "name": "风瀛洲剧场", "cityId": "shanghai", "address": "城桥镇八一路488号2幢" },
-    { "id": "sh_haichang_happy_theater", "name": "海昌海洋公园-欢乐剧场", "cityId": "shanghai", "address": "临港新片区银飞路167号" },
-    { "id": "sh_haichang_dolphin", "name": "海昌海洋公园-海豚表演场", "cityId": "shanghai", "address": "临港新片区银飞路166号" },
-    { "id": "sh_haichang_animal", "name": "海昌海洋公园-大型动物表演场", "cityId": "shanghai", "address": "临港新片区银飞路168号" },
-    { "id": "sh_nicheng_cinema", "name": "泥城影剧院", "cityId": "shanghai", "address": "泥城镇鸿音路3156弄8号" },
-    { "id": "sh_wanxiang_cinema", "name": "万祥影剧院", "cityId": "shanghai", "address": "万祥镇万祥路101号" },
-    { "id": "sh_lingang_arts", "name": "临港演艺中心", "cityId": "shanghai", "address": "" },
-    { "id": "sh_dishui_lake_theater", "name": "滴水湖剧院", "cityId": "shanghai", "address": "临港新片区环湖西一路91号" },
-    { "id": "sh_poly_yunjian", "name": "上海保利云间剧院", "cityId": "shanghai", "address": "上海市松江区人民南路6弄69号-2" }, 
+    { "id": "sh_children_art_center", "name": "上海儿童艺术剧场-中心剧场", "cityId": "shanghai", cover: sh_children_art_centerImg, "address": "上海市黄浦区苗江路800号" },
+    { "id": "sh_children_art_small", "name": "上海儿童艺术剧场-小剧场", "cityId": "shanghai", cover: sh_children_art_smallImg, "address": "上海市黄浦区苗江路800号" },
+    { "id": "sh_grand_theater_small", "name": "上海大剧院-小剧场", "cityId": "shanghai", cover: sh_grand_theater_smallImg, "address": "人民大道300号" },
+    { "id": "sh_music_hall_small", "name": "上海音乐厅小剧场", "cityId": "shanghai", cover: sh_music_hall_smallImg, "address": "黄浦区延安东路523号" },
+    { "id": "sh_huangpu_culture_bailanhua", "name": "上海市黄浦区文化馆-白玉兰剧场", "cityId": "shanghai", cover: sh_huangpu_culture_bailanhuaImg, "address": "重庆南路308号" },
+    { "id": "sh_huangpu_culture_yalushu", "name": "上海市黄浦区文化馆-雅庐书场", "cityId": "shanghai", cover: sh_huangpu_culture_yalushuImg, "address": "重庆南路308号" },
+    { "id": "sh_changjiang_red", "name": "上海长江剧场（红匣子）", "cityId": "shanghai", cover: sh_changjiang_redImg, "address": "上海市黄浦区黄河路35号" },
+    { "id": "sh_changjiang_black", "name": "上海长江剧场（黑匣子）", "cityId": "shanghai", cover: sh_changjiang_blackImg, "address": "上海市黄浦区黄河路35号" },
+    { "id": "sh_yuyuan_theater", "name": "上海豫园海上梨园小剧场", "cityId": "shanghai", cover: sh_yuyuan_theaterImg, "address": "上海市黄浦区文昌路10号4楼A" },
+    { "id": "sh_molihua_theater", "name": "茉莉花剧场", "cityId": "shanghai", cover: sh_molihua_theaterImg, "address": "上海市黄浦区北海路247号1幢" },
+    { "id": "sh_800show", "name": "800秀剧场", "cityId": "shanghai", cover: sh_800showImg, "address": "常德路800号8幢101室" },
+    { "id": "sh_exhibition_center_theater", "name": "上展中心剧院", "cityId": "shanghai", cover: sh_exhibition_center_theaterImg, "address": "延安中路1000号" },
+    { "id": "sh_little_partner_theater", "name": "上海小伙伴剧场", "cityId": "shanghai", cover: sh_little_partner_theaterImg, "address": "延安西路64号11幢4层、5层" },
+    { "id": "sh_shang_yan_gu", "name": "尚演谷", "cityId": "shanghai", cover: sh_shang_yan_guImg, "address": "北京西路1013号" },
+    { "id": "sh_wenyihuitang", "name": "文艺会堂", "cityId": "shanghai", cover: sh_wenyihuitangImg, "address": "延安西路200号" },
+    { "id": "sh_lanxin_jing_theater", "name": "兰馨影业-光影车间.静剧场", "cityId": "shanghai", cover: sh_lanxin_jing_theaterImg, "address": "乌鲁木齐北路459号3幢101室" },
+    { "id": "sh_china_welfare_theater", "name": "中国福利会儿童艺术剧院(马兰花剧场)", "cityId": "shanghai", cover: sh_china_welfare_theaterImg, "address": "华山路643号" },
+    { "id": "sh_jingan_sports", "name": "静安体育中心", "cityId": "shanghai", cover: sh_jingan_sportsImg, "address": "汶水路116号" },
+    { "id": "sh_sta_experimental", "name": "上戏实验剧院", "cityId": "shanghai", cover: sh_sta_experimentalImg, "address": "华山路630号" },
+    { "id": "sh_yunfeng_theater", "name": "云峰剧院", "cityId": "shanghai", cover: sh_yunfeng_theaterImg, "address": "北京西路1700号" },
+    { "id": "sh_circus_city", "name": "上海马戏城", "cityId": "shanghai", cover: sh_circus_cityImg, "address": "共和新路2266号" },
+    { "id": "sh_portman_theater", "name": "上海商城剧院", "cityId": "shanghai", cover: sh_portman_theaterImg, "address": "南京西路1376号" },
+    { "id": "sh_zhanbei_teahouse", "name": "上海市闸北区宋园茶艺馆（书场）", "cityId": "shanghai", cover: sh_zhanbei_teahouseImg, "address": "共和新路1667号" },
+    { "id": "sh_railway_workers_palace", "name": "上海铁路工人文化宫", "cityId": "shanghai", cover: sh_railway_workers_palaceImg, "address": "虬江路1150号" },
+    { "id": "sh_hubei_cinema", "name": "上海市沪北电影院", "cityId": "shanghai", cover: sh_hubei_cinemaImg, "address": "洛川东路500号" },
+    { "id": "sh_drama_center_salon", "name": "上海话剧艺术中心-戏剧沙龙", "cityId": "shanghai", cover: sh_drama_center_salonImg, "address": "安福路288号" },
+    { "id": "sh_drama_center_d6", "name": "上海话剧艺术中心-D6空间", "cityId": "shanghai", cover: sh_drama_center_d6Img, "address": "安福路288号" },
+    { "id": "sh_da_theater", "name": "上海大戏院", "cityId": "shanghai", cover: sh_da_theaterImg, "address": "复兴中路1186号1幢" },
+    { "id": "sh_mass_art_hall", "name": "上海市群众艺术馆", "cityId": "shanghai", cover: sh_mass_art_hallImg, "address": "中山西路1551号" },
+    { "id": "sh_symphony_hall", "name": "上海交响乐团音乐厅", "cityId": "shanghai", cover: sh_symphony_hallImg, "address": "复兴中路1380号" },
+    { "id": "sh_xuhui_tianlin_culture", "name": "徐汇区田林街道社区文化活动中心", "cityId": "shanghai", cover: sh_xuhui_tianlin_cultureImg, "address": "田林东路588号" },
+    { "id": "sh_shangyin_opera", "name": "上音歌剧院", "cityId": "shanghai", cover: sh_shangyin_operaImg, "address": "汾阳路6号" },
+    { "id": "sh_xuhui_sports", "name": "徐汇体育公园", "cityId": "shanghai", cover: sh_xuhui_sportsImg, "address": "天钥桥路666号" },
+    { "id": "sh_grand_stage", "name": "上海大舞台", "cityId": "shanghai", cover: sh_grand_stageImg, "address": "漕溪北路1111号" },
+    { "id": "sh_wanping_theater", "name": "上海市宛平艺苑", "cityId": "shanghai", cover: sh_wanping_theaterImg, "address": "中山南二路859号" },
+    { "id": "sh_hongkou_stadium", "name": "虹口足球场", "cityId": "shanghai", cover: sh_hongkou_stadiumImg, "address": "东江湾路444号" },
+    { "id": "sh_modernsky_lab", "name": "摩登天空LAB", "cityId": "shanghai", cover: sh_modernsky_labImg, "address": "瑞虹路188号309、310、507室" },
+    { "id": "sh_quyang_culture", "name": "虹口区曲阳文化馆", "cityId": "shanghai", cover: sh_quyang_cultureImg, "address": "曲阳路570号" },
+    { "id": "sh_1933_micro", "name": "1933微剧场", "cityId": "shanghai", cover: sh_1933_microImg, "address": "沙泾路10号1号楼447幢201室" },
+    { "id": "sh_hongkou_workers", "name": "虹口区工人文化宫", "cityId": "shanghai", cover: sh_hongkou_workersImg, "address": "飞虹路528号" },
+    { "id": "sh_xingmeng_theater", "name": "星梦剧场", "cityId": "shanghai", cover: sh_xingmeng_theaterImg, "address": "嘉兴路267号1楼A区" },
+    { "id": "sh_jingwu_sports", "name": "精武体育馆", "cityId": "shanghai", cover: sh_jingwu_sportsImg, "address": "东体育会路715号" },
+    { "id": "sh_zhenzhu_theater", "name": "珍珠剧场", "cityId": "shanghai", cover: sh_zhenzhu_theaterImg, "address": "乍浦路471号" },
+    { "id": "sh_blue_note", "name": "Blue Note Shanghai", "cityId": "shanghai", cover: sh_blue_noteImg, "address": "四川北路867号301室" },
+    { "id": "sh_changning_folk_culture", "name": "上海市长宁民俗文化中心", "cityId": "shanghai", cover: sh_changning_folk_cultureImg, "address": "天山西路201号" },
+    { "id": "sh_changning_art_center", "name": "上海市长宁文化艺术中心", "cityId": "shanghai", cover: sh_changning_art_centerImg, "address": "仙霞路650号" },
+    { "id": "sh_east_hongqiao_theater", "name": "上海东虹桥剧院", "cityId": "shanghai", cover: sh_east_hongqiao_theaterImg, "address": "天山路888号1层—C" },
+    { "id": "sh_jiangchuan_theater", "name": "江川剧场", "cityId": "shanghai", cover: sh_jiangchuan_theaterImg, "address": "江川路344号三层" },
+    { "id": "sh_new_dongyuan", "name": "上海新东苑", "cityId": "shanghai", cover: sh_new_dongyuanImg, "address": "金光路225号第3层" },
+    { "id": "sh_pujiang_cinema", "name": "新浦江影剧院", "cityId": "shanghai", cover: sh_pujiang_cinemaImg, "address": "浦江镇谈家港叶家桥路288号" },
+    { "id": "sh_qizhong_sports", "name": "旗忠森林体育城", "cityId": "shanghai", cover: sh_qizhong_sportsImg, "address": "光华路2118号C-117" },
+    { "id": "sh_wujing_culture", "name": "吴泾文化馆", "cityId": "shanghai", cover: sh_wujing_cultureImg, "address": "龙吴路5533号" },
+    { "id": "sh_city_theater", "name": "上海城市剧院", "cityId": "shanghai", cover: sh_city_theaterImg, "address": "都市路4889号" },
+    { "id": "sh_suoshi_sheng", "name": "索石生剧场", "cityId": "shanghai", cover: sh_suoshi_shengImg, "address": "七莘路1366号2幢201、203室" },
+    { "id": "sh_suoshi_mo", "name": "索石墨剧场", "cityId": "shanghai", cover: sh_suoshi_moImg, "address": "七莘路1366号2幢211室" },
+    { "id": "sh_dazero_bay_art", "name": "大零号湾文化艺术中心", "cityId": "shanghai", cover: sh_dazero_bay_artImg, "address": "虹梅南路5669号" },
+    { "id": "sh_qingpu_culture", "name": "上海市青浦区文化馆", "cityId": "shanghai", cover: sh_qingpu_cultureImg, "address": "公园路78号" },
+    { "id": "sh_qingpu_zhaogang_culture", "name": "青浦区赵巷镇文化中心站", "cityId": "shanghai", cover: sh_qingpu_zhaogang_cultureImg, "address": "赵巷镇赵中路28号" },
+    { "id": "sh_qingpu_zhonggu_cinema", "name": "青浦重固影剧院", "cityId": "shanghai", cover: sh_qingpu_zhonggu_cinemaImg, "address": "重固镇通波塘西街28号" },
+    { "id": "sh_qingpu_zhujiajiao_cinema", "name": "青浦朱家角影剧院", "cityId": "shanghai", cover: sh_qingpu_zhujiajiao_cinemaImg, "address": "朱家角镇新溪路18号" },
+    { "id": "sh_liantang_cinema", "name": "练塘影剧院", "cityId": "shanghai", cover: sh_liantang_cinemaImg, "address": "练塘镇练新路99号" },
+    { "id": "sh_hong_hall", "name": "虹馆", "cityId": "shanghai", cover: sh_hong_hallImg, "address": "崧泽大道333号EH馆" },
+    { "id": "sh_yongle_cinema", "name": "永乐影院2店", "cityId": "shanghai", cover: sh_yongle_cinemaImg, "address": "崧文南路169弄27号301室" },
+    { "id": "sh_shouwei_micro", "name": "首位亲子微剧场", "cityId": "shanghai", cover: sh_shouwei_microImg, "address": "嘉松中路6200号1幢3层-A-001、002、003" },
+    { "id": "sh_qing_art_space", "name": "青·当代艺术空间", "cityId": "shanghai", cover: sh_qing_art_spaceImg, "address": "朱家角镇课植园路599弄36号" },
+    { "id": "sh_zaomeng_box", "name": "造梦盒子", "cityId": "shanghai", cover: sh_zaomeng_boxImg, "address": "青浦区徐泾镇崧泽大道2229弄66号L3-13" },
+    { "id": "sh_young_theater_main", "name": "YOUNG剧场-大剧院", "cityId": "shanghai", cover: sh_young_theater_mainImg, "address": "控江路1155号" },
+    { "id": "sh_young_theater_small", "name": "YOUNG剧场-小剧院", "cityId": "shanghai", cover: sh_young_theater_smallImg, "address": "控江路1155号" },
+    { "id": "sh_donggong_theater", "name": "东宫剧院", "cityId": "shanghai", cover: sh_donggong_theaterImg, "address": "平凉路1500号" },
+    { "id": "sh_intl_fashion_center", "name": "上海国际时尚中心", "cityId": "shanghai", cover: sh_intl_fashion_centerImg, "address": "杨树浦路2866号" },
+    { "id": "sh_mercedes_benz_arena", "name": "梅赛德斯-奔驰文化中心", "cityId": "shanghai", cover: sh_mercedes_benz_arenaImg, "address": "世博大道1200号" },
+    { "id": "sh_mercedes_benz_music_club", "name": "梅赛德斯-奔驰文化中心-音乐俱乐部", "cityId": "shanghai", cover: sh_mercedes_benz_music_clubImg, "address": "世博大道1200号" },
+    { "id": "sh_nanhui_haidong_cinema", "name": "南汇海东影剧院", "cityId": "shanghai", cover: sh_nanhui_haidong_cinemaImg, "address": "东海镇盐朝公路869号" },
+    { "id": "sh_nanhui_zhoupu_cinema", "name": "上海南汇周浦影剧场", "cityId": "shanghai", cover: sh_nanhui_zhoupu_cinemaImg, "address": "周浦镇年家浜路341号" },
+    { "id": "sh_nanhui_xuanqiao_cinema", "name": "南汇宣桥镇影剧院", "cityId": "shanghai", cover: sh_nanhui_xuanqiao_cinemaImg, "address": "宣桥镇六奉公路236号" },
+    { "id": "sh_hangtou_culture", "name": "航头镇文化中心", "cityId": "shanghai", cover: sh_hangtou_cultureImg, "address": "航头镇航鹤路388号B幢" },
+    { "id": "sh_pudong_sandun_cinema", "name": "上海浦东新区三墩影剧院", "cityId": "shanghai", cover: sh_pudong_sandun_cinemaImg, "address": "大团镇洪通路41号" },
+    { "id": "sh_pudong_chuansha_cinema", "name": "上海浦东新区川沙影剧院", "cityId": "shanghai", cover: sh_pudong_chuansha_cinemaImg, "address": "川沙镇新川路400号" },
+    { "id": "sh_nanhui_yancang_cinema", "name": "南汇盐仓影剧院", "cityId": "shanghai", cover: sh_nanhui_yancang_cinemaImg, "address": "祝桥镇沿路街53号" },
+    { "id": "sh_pudong_dongfang_cinema", "name": "上海浦东新区东方电影院", "cityId": "shanghai", cover: sh_pudong_dongfang_cinemaImg, "address": "惠南镇人民西路2号" },
+    { "id": "sh_pudong_hangtou_teahouse", "name": "上海市浦东新区航头镇书场茶馆", "cityId": "shanghai", cover: sh_pudong_hangtou_teahouseImg, "address": "航头镇镇下沙街163号" },
+    { "id": "sh_nanhui_sanzao_cinema", "name": "南汇三灶影剧院", "cityId": "shanghai", cover: sh_nanhui_sanzao_cinemaImg, "address": "浦东新区三灶镇" },
+    { "id": "sh_nanhui_datuan_yongchun", "name": "上海市南汇大团镇永春演艺厅", "cityId": "shanghai", cover: sh_nanhui_datuan_yongchunImg, "address": "大团镇永春东路100号二楼" },
+    { "id": "sh_nanhui_hangtou_taoyuanchun", "name": "上海市南汇航头镇陶园春演艺厅", "cityId": "shanghai", cover: sh_nanhui_hangtou_taoyuanchunImg, "address": "航头镇下沙街227号" },
+    { "id": "sh_shangyin_dongyi_cinema", "name": "上海尚银东艺数字影城", "cityId": "shanghai", cover: sh_shangyin_dongyi_cinemaImg, "address": "浦东新区华佗路280弄31号" },
+    { "id": "sh_lanxin_cinema", "name": "兰馨影戏苑", "cityId": "shanghai", cover: sh_lanxin_cinemaImg, "address": "张杨路400号" },
+    { "id": "sh_zhoupu_theater", "name": "周浦剧院", "cityId": "shanghai", cover: sh_zhoupu_theaterImg, "address": "周东路266号西一楼" },
+    { "id": "sh_wild_animal_park", "name": "上海野生动物园", "cityId": "shanghai", cover: sh_wild_animal_parkImg, "address": "宣桥镇南六公路178号" },
+    { "id": "sh_pudong_culture_hall", "name": "浦东新区浦东文化馆", "cityId": "shanghai", cover: sh_pudong_culture_hallImg, "address": "浦东大道143号" },
+    { "id": "sh_himalaya_stage", "name": "喜玛拉雅·大观舞台", "cityId": "shanghai", cover: sh_himalaya_stageImg, "address": "芳甸路1188弄1号" },
+    { "id": "sh_1862_art_center", "name": "1862时尚艺术中心一号仓", "cityId": "shanghai", cover: sh_1862_art_centerImg, "address": "滨江大道1777号" },
+    { "id": "sh_oriental_art_chamber", "name": "上海东方艺术中心-演奏厅", "cityId": "shanghai", cover: sh_oriental_art_chamberImg, "address": "丁香路425号" },
+    { "id": "sh_xinchang_culture", "name": "新场镇文化活动中心", "cityId": "shanghai", cover: sh_xinchang_cultureImg, "address": "新场镇新环东路276号" },
+    { "id": "sh_huinan_huanglu_culture", "name": "惠南镇黄路社区文化艺术中心", "cityId": "shanghai", cover: sh_huinan_huanglu_cultureImg, "address": "惠南镇川南奉公路6193号" },
+    { "id": "sh_zhangjiang_drama_valley", "name": "张江戏剧谷", "cityId": "shanghai", cover: sh_zhangjiang_drama_valleyImg, "address": "张江路69号" },
+    { "id": "sh_red_hall", "name": "红厅", "cityId": "shanghai", cover: sh_red_hallImg, "address": "世博大道1500号" },
+    { "id": "sh_disney_grand", "name": "迪士尼-大剧院", "cityId": "shanghai", cover: sh_disney_grandImg, "address": "申迪西路255弄800号" },
+    { "id": "sh_disney_venues", "name": "迪士尼-凡迭戈剧院、林间剧场、故事舞台", "cityId": "shanghai", cover: sh_disney_venuesImg, "address": "申迪西路255弄140号、305号、401号" },
+    { "id": "sh_china_art_palace", "name": "中华艺术宫", "cityId": "shanghai", cover: sh_china_art_palaceImg, "address": "上南路161号" },
+    { "id": "sh_pudong_sanlin_cinema", "name": "上海浦东新区三林影剧院", "cityId": "shanghai", cover: sh_pudong_sanlin_cinemaImg, "address": "杨思镇杨新路60号" },
+    { "id": "sh_qiangujing", "name": "上海千古情", "cityId": "shanghai", cover: sh_qiangujingImg, "address": "世博大道1750号" },
+    { "id": "sh_bailemen", "name": "上海百乐门", "cityId": "shanghai", cover: sh_bailemenImg, "address": "" },
+    { "id": "sh_waigaoqiao_art", "name": "外高桥艺术中心", "cityId": "shanghai", cover: sh_waigaoqiao_artImg, "address": "张杨北路3207号" },
+    { "id": "sh_guangxin_unlimited", "name": "光新无限演艺中心", "cityId": "shanghai", cover: sh_guangxin_unlimitedImg, "address": "华池路10号1层140室" },
+    { "id": "sh_fengxian_gov_center", "name": "上海市奉贤区机关服务中心", "cityId": "shanghai", cover: sh_fengxian_gov_centerImg, "address": "解放东路928号" },
+    { "id": "sh_wuqiao_peony_cinema", "name": "上海邬桥牡丹影剧院", "cityId": "shanghai", cover: sh_wuqiao_peony_cinemaImg, "address": "大叶公路259号" },
+    { "id": "sh_fengxian_nanqiao_cinema", "name": "奉贤区南桥影剧院", "cityId": "shanghai", cover: sh_fengxian_nanqiao_cinemaImg, "address": "南桥镇南桥路333号" },
+    { "id": "sh_huqiao_cinema", "name": "上海胡桥影剧院", "cityId": "shanghai", cover: sh_huqiao_cinemaImg, "address": "柘林镇胡桥社区文化路45号" },
+    { "id": "sh_zhelin_cinema", "name": "上海柘林影剧院", "cityId": "shanghai", cover: sh_zhelin_cinemaImg, "address": "柘林新街（钦林北路31号）" },
+    { "id": "sh_fengxian_qiaoqiao_cinema", "name": "上海奉贤钱桥影剧院", "cityId": "shanghai", cover: sh_fengxian_qiaoqiao_cinemaImg, "address": "钱桥社区文化路8号" },
+    { "id": "sh_fengxian_qingcun_culture", "name": "奉贤县青村文化站", "cityId": "shanghai", cover: sh_fengxian_qingcun_cultureImg, "address": "青村镇西街5号（人民路15号）" },
+    { "id": "sh_jiukeshu_main", "name": "上海九棵树未来艺术中心—大剧场", "cityId": "shanghai", cover: sh_jiukeshu_mainImg, "address": "树桓路99号" },
+    { "id": "sh_jiukeshu_small", "name": "上海九棵树未来艺术中心—小剧场", "cityId": "shanghai", cover: sh_jiukeshu_smallImg, "address": "树桓路99号" },
+    { "id": "sh_jiukeshu_experimental", "name": "上海九棵树未来艺术中心—实验剧场", "cityId": "shanghai", cover: sh_jiukeshu_experimentalImg, "address": "树桓路99号" },
+    { "id": "sh_jiukeshu_forest", "name": "上海九棵树未来艺术中心—森林剧场", "cityId": "shanghai", cover: sh_jiukeshu_forestImg, "address": "树桓路99号" },
+    { "id": "sh_jiukeshu_waterfront", "name": "上海九棵树未来艺术中心—水岸舞台", "cityId": "shanghai", cover: sh_jiukeshu_waterfrontImg, "address": "树桓路99号" },
+    { "id": "sh_baoshan_culture", "name": "宝山区文化馆", "cityId": "shanghai", cover: sh_baoshan_cultureImg, "address": "牡丹江路1760号" },
+    { "id": "sh_yihong_theater", "name": "依弘剧场", "cityId": "shanghai", cover: sh_yihong_theaterImg, "address": "蕰川路6号30幢" },
+    { "id": "sh_baoshan_starx", "name": "上海宝山星轶STARX影剧院", "cityId": "shanghai", cover: sh_baoshan_starxImg, "address": "沪太路1933号[K]区2层202" },
+    { "id": "sh_jiading_cinema", "name": "嘉定影剧院", "cityId": "shanghai", cover: sh_jiading_cinemaImg, "address": "城中路149号" },
+    { "id": "sh_kaixinmahua_theater", "name": "开心麻花剧场", "cityId": "shanghai", cover: sh_kaixinmahua_theaterImg, "address": "陈翔公路2299号3层03-33、03-34" },
+    { "id": "sh_chongming_cinema", "name": "崇明影剧院", "cityId": "shanghai", cover: sh_chongming_cinemaImg, "address": "崇明城内八一路488号" },
+    { "id": "sh_chongming_huju", "name": "崇明县沪剧团", "cityId": "shanghai", cover: sh_chongming_hujuImg, "address": "城桥镇川心街1号" },
+    { "id": "sh_fengyingzhou_theater", "name": "风瀛洲剧场", "cityId": "shanghai", cover: sh_fengyingzhou_theaterImg, "address": "城桥镇八一路488号2幢" },
+    //{ "id": "sh_haichang_happy_theater", "name": "海昌海洋公园-欢乐剧场", "cityId": "shanghai", cover: sh_haichang_happy_theaterImg, "address": "临港新片区银飞路167号" },
+    //{ "id": "sh_haichang_dolphin", "name": "海昌海洋公园-海豚表演场", "cityId": "shanghai", cover: sh_haichang_dolphinImg, "address": "临港新片区银飞路166号" },
+    //{ "id": "sh_haichang_animal", "name": "海昌海洋公园-大型动物表演场", "cityId": "shanghai", cover: sh_haichang_animalImg, "address": "临港新片区银飞路168号" },
+    { "id": "sh_nicheng_cinema", "name": "泥城影剧院", "cityId": "shanghai", cover: sh_nicheng_cinemaImg, "address": "泥城镇鸿音路3156弄8号" },
+    { "id": "sh_wanxiang_cinema", "name": "万祥影剧院", "cityId": "shanghai", cover: sh_wanxiang_cinemaImg, "address": "万祥镇万祥路101号" },
+    { "id": "sh_lingang_arts", "name": "临港演艺中心", "cityId": "shanghai", cover: sh_lingang_artsImg, "address": "" },
+    { "id": "sh_dishui_lake_theater", "name": "滴水湖剧院", "cityId": "shanghai", cover: sh_dishui_lake_theaterImg, "address": "临港新片区环湖西一路91号" },
+    { "id": "sh_poly_yunjian", "name": "上海保利云间剧院", "cityId": "shanghai", cover: sh_poly_yunjianImg, "address": "上海市松江区人民南路6弄69号-2" }, 
      // ─── 广州 ───
   {
     id: 'gz_opera', name: '广州大剧院·歌剧厅', cityId: 'guangzhou',
