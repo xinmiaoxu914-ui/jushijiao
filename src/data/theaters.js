@@ -5,6 +5,8 @@ import lanxinImg from '../assets/images/lanxin-daxiyuan.jpg'
 import shangjuchangImg from '../assets/images/shangjuchang.jpg'
 import renminDawutaiImg from '../assets/images/renmin-dawutai.jpg'
 import beiwaitanImg from '../assets/images/beiwaitan-youbang.jpg'
+import huangpuImg from '../assets/images/huangpujuchang.jpg'
+import shanghaiMuouImg from '../assets/images/shanghaimuoujutuan.png'
 
 // 座位区段数据生成
 function buildSections(config) {
