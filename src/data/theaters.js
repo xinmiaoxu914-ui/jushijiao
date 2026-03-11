@@ -20,7 +20,7 @@ import sh_danceImg from '../assets/images/sh-dance.jpg'
 import sh_asia_starImg from '../assets/images/sh-asia-star.jpg'
 import sh_jiuchengImg from '../assets/images/sh-jiucheng.jpg'
 import sh_tianchangImg from '../assets/images/sh-tianchang.jpg'
-import sh_shanghai_daImg from '../assets/images/sh-shanghai-da.jpg'
+import sh_shanghai_daImg from '../assets/images/sh-shanghai_da.jpg'
 import sh_music_hallImg from '../assets/images/sh-music-hall.jpg'
 import sh_daningImg from '../assets/images/sh-daning.jpg'
 import sh_hongqiao_artImg from '../assets/images/sh-hongqiao-art.jpg'
@@ -68,7 +68,6 @@ import sh_xuhui_tianlin_cultureImg from '../assets/images/sh-xuhui-tianlin-cultu
 import sh_shangyin_operaImg from '../assets/images/sh-shangyin-opera.jpg'
 import sh_xuhui_sportsImg from '../assets/images/sh-xuhui-sports.jpg'
 import sh_grand_stageImg from '../assets/images/sh-grand-stage.jpg'
-import sh_wanping_theaterImg from '../assets/images/sh-wanping-theater.jpg'
 import sh_hongkou_stadiumImg from '../assets/images/sh-hongkou-stadium.jpg'
 import sh_modernsky_labImg from '../assets/images/sh-modernsky-lab.jpg'
 import sh_quyang_cultureImg from '../assets/images/sh-quyang-culture.jpg'
@@ -197,7 +196,7 @@ export const THEATERS = [
   {
     id: 'ncpa_opera', name: '国家大剧院·歌剧院', cityId: 'beijing',
     cover: 'https://images.unsplash.com/photo-1503095396549-807759245b35?w=800&q=80',
-    address: '北京市西城区西长安街2号', rating: 4.9, reviewCount: 1286,
+    address: '北京市西城区西长安街2号', rating: 4.5, reviewCount: 1286,
     tags: ['歌剧', '舞剧', '地标'],
     description: '国家大剧院歌剧院是中国最高规格的表演艺术场所，共设2416个座位，采用品字形舞台，以精湛的声学设计享誉世界。',
     transport: '地铁1号线天安门西站C出口步行约10分钟', phone: '010-66550000',
@@ -212,7 +211,7 @@ export const THEATERS = [
   {
     id: 'ncpa_theater', name: '国家大剧院·戏剧场', cityId: 'beijing',
     cover: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80',
-    address: '北京市西城区西长安街2号', rating: 4.8, reviewCount: 896,
+    address: '北京市西城区西长安街2号', rating: 4.4, reviewCount: 896,
     tags: ['话剧', '戏曲', '小剧场'],
     description: '戏剧场共1040个座位，是国家大剧院话剧、戏曲演出的核心场所，观众厅亲密感极强。',
     transport: '地铁1号线天安门西站C出口步行约10分钟', phone: '010-66550000',
@@ -224,7 +223,7 @@ export const THEATERS = [
   {
     id: 'tianqiao', name: '天桥艺术中心·大剧场', cityId: 'beijing',
     cover: 'https://images.unsplash.com/photo-1503095396549-807759245b35?w=800&q=80',
-    address: '北京市西城区天桥南大街天桥演艺区', rating: 4.7, reviewCount: 634,
+    address: '北京市西城区天桥南大街天桥演艺区', rating: 4.5, reviewCount: 634,
     tags: ['音乐剧', '演唱会', '现代剧场'],
     description: '天桥艺术中心大剧场设有1600座，是北京最重要的音乐剧演出场所之一，配备国际一流舞台技术设备。',
     transport: '地铁4号线菜市口站步行约8分钟', phone: '010-63581188',
@@ -238,7 +237,7 @@ export const THEATERS = [
   {
     id: 'capital_theater', name: '首都剧场', cityId: 'beijing',
     cover: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80',
-    address: '北京市东城区王府井大街22号', rating: 4.8, reviewCount: 521,
+    address: '北京市东城区王府井大街22号', rating: 4.5, reviewCount: 521,
     tags: ['话剧', '北京人艺', '经典'],
     description: '首都剧场1954年建成，是北京人民艺术剧院驻场剧院，中国最具历史底蕴的话剧圣殿，共900余座。',
     transport: '地铁1号线王府井站A出口步行约10分钟', phone: '010-65250996',
@@ -758,7 +757,6 @@ export const THEATERS = [
     { "id": "sh_shangyin_opera", "name": "上音歌剧院", "cityId": "shanghai", cover: sh_shangyin_operaImg, "address": "汾阳路6号" },
     { "id": "sh_xuhui_sports", "name": "徐汇体育公园", "cityId": "shanghai", cover: sh_xuhui_sportsImg, "address": "天钥桥路666号" },
     { "id": "sh_grand_stage", "name": "上海大舞台", "cityId": "shanghai", cover: sh_grand_stageImg, "address": "漕溪北路1111号" },
-    { "id": "sh_wanping_theater", "name": "上海市宛平艺苑", "cityId": "shanghai", cover: sh_wanping_theaterImg, "address": "中山南二路859号" },
     { "id": "sh_hongkou_stadium", "name": "虹口足球场", "cityId": "shanghai", cover: sh_hongkou_stadiumImg, "address": "东江湾路444号" },
     { "id": "sh_modernsky_lab", "name": "摩登天空LAB", "cityId": "shanghai", cover: sh_modernsky_labImg, "address": "瑞虹路188号309、310、507室" },
     { "id": "sh_quyang_culture", "name": "虹口区曲阳文化馆", "cityId": "shanghai", cover: sh_quyang_cultureImg, "address": "曲阳路570号" },

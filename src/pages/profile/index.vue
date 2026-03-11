@@ -1,16 +1,16 @@
 <template>
   <view style="min-height:100vh; background:#F5F5F7; padding-bottom:72px">
     <!-- 顶部渐变 header -->
-    <view style="background:linear-gradient(160deg,#1A0A0F 0%,#3A0E1F 100%); padding:52px 20px 28px">
+    <view style="background:linear-gradient(160deg, #2B263B 0%, #373246 100%); padding:52px 20px 28px">
       <view style="display:flex; align-items:center; gap:16px; margin-bottom:20px">
         <!-- 默认头像 -->
         <view style="width:64px; height:64px; border-radius:50%; background:rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:32px">
           🎭
         </view>
         <view>
-          <text style="display:block; font-size:18px; font-weight:900; color:#fff; margin-bottom:4px">剧迷用户</text>
-          <view style="display:inline-flex; align-items:center; gap:4px; background:rgba(201,169,110,0.2); border:1px solid rgba(201,169,110,0.4); border-radius:20px; padding:2px 10px">
-            <text style="font-size:11px; color:#C9A96E; font-weight:600">{{ level.icon }} {{ level.name }}</text>
+          <text style="display:block; font-size:18px; font-weight:900; color: #fff; margin-bottom:4px">剧韭</text>
+          <view style="display:inline-flex; align-items:center; gap:4px; background:rgba(50, 33, 52, 0.2); border:1px solid rgba(174, 110, 201, 0.4); border-radius:20px; padding:2px 10px">
+            <text style="font-size:11px; color:#6957D0; font-weight:600">{{ level.icon }} {{ level.name }}</text>
           </view>
         </view>
       </view>
@@ -42,7 +42,7 @@
       >
         <text
           style="font-size:13px; font-weight:600"
-          :style="{ color: activeTab === i ? '#6B1A2E' : '#9CA3AF' }"
+          :style="{ color: activeTab === i ? '#6957D0' : '#9CA3AF' }"
         >{{ tab }}</text>
         <view
           v-if="activeTab === i"
@@ -56,17 +56,17 @@
       <view v-if="visits.length === 0" style="display:flex; flex-direction:column; align-items:center; padding:60px 32px; text-align:center">
         <text style="font-size:48px; margin-bottom:12px">🎭</text>
         <text style="font-size:15px; font-weight:700; color:#374151; margin-bottom:6px">还没有观剧记录</text>
-        <text style="font-size:13px; color:#9CA3AF">去剧院详情页留下你的视角吧</text>
+        <text style="font-size:13px; color: #9CA3AF">去剧院详情页留下你的视角吧</text>
       </view>
       <view v-else style="padding:12px 16px; display:grid; grid-template-columns:1fr 1fr; gap:12px">
         <view
           v-for="v in visits" :key="v.id"
-          style="background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,0.06)"
+          style="background: #fff; border-radius:16px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,0.06)"
         >
           <image :src="v.cover" mode="aspectFill" style="width:100%; height:90px; display:block" />
           <view style="padding:10px">
             <text style="display:block; font-size:12px; font-weight:700; color:#111; margin-bottom:4px; line-height:1.4">{{ v.name }}</text>
-            <text style="font-size:11px; color:#9CA3AF">{{ v.date }}</text>
+            <text style="font-size:11px; color: #9CA3AF">{{ v.date }}</text>
           </view>
         </view>
       </view>
@@ -77,7 +77,7 @@
       <view v-if="reviews.length === 0" style="display:flex; flex-direction:column; align-items:center; padding:60px 32px; text-align:center">
         <text style="font-size:48px; margin-bottom:12px">✍️</text>
         <text style="font-size:15px; font-weight:700; color:#374151; margin-bottom:6px">还没有发布评价</text>
-        <text style="font-size:13px; color:#9CA3AF">观演后去写下你的感受吧</text>
+        <text style="font-size:13px; color: #9CA3AF">观演后去写下你的感受吧</text>
       </view>
       <view v-else style="padding:12px 16px; display:flex; flex-direction:column; gap:10px">
         <view

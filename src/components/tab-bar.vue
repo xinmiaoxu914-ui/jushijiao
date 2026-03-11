@@ -14,7 +14,7 @@
           width="22" height="22"
           viewBox="0 0 24 24"
           fill="none"
-          :stroke="activeTab === i ? '#6B1A2E' : '#BDBDBD'"
+          :stroke="activeTab === i ? '#6957D0' : '#BDBDBD'"
           stroke-width="1.8"
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -25,7 +25,7 @@
         </svg>
         <text
           style="font-size:10px; line-height:1.4; font-weight:500; pointer-events:none"
-          :style="{ color: activeTab === i ? '#6B1A2E' : '#BDBDBD' }"
+          :style="{ color: activeTab === i ? '#6957D0' : '#BDBDBD' }"
         >{{ tab.label }}</text>
       </view>
     </view>

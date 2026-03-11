@@ -4,11 +4,11 @@
     <!-- ══ 剧场视野 tab ══ -->
     <view v-show="activeTab === 0">
     <!-- 顶部品牌 + 搜索 -->
-    <view style="background: linear-gradient(160deg, #1A0A0F 0%, #3A0E1F 100%); padding: 52px 16px 16px">
+    <view style="background: linear-gradient(160deg, #2b263b 0%, #4b3e71d9 100%); padding: 52px 16px 16px">
       <view style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px">
         <view>
-          <text style="display:block; font-size:10px; color:#C9A96E; letter-spacing:3px; font-weight:600">THEATERVIEW</text>
-          <text style="display:block; font-size:20px; color:#fff; font-weight:900; letter-spacing:1px; margin-top:1px">剧视角</text>
+          <text style="display:block; font-size:10px; color: #6957D0; letter-spacing:3px; font-weight:600">THEATERVIEW</text>
+          <text style="display:block; font-size:22px; color: #fff; font-weight:900; letter-spacing:1px; margin-top:1px">剧视角</text>
         </view>
       </view>
       <view style="background:#fff; border-radius:12px; padding:10px 14px; display:flex; align-items:center; gap:8px">
@@ -57,7 +57,7 @@
     <view v-else>
       <view style="padding:16px 16px 10px; display:flex; align-items:center; justify-content:space-between">
         <text style="font-size:15px; font-weight:800; color:#111">选择城市</text>
-        <text style="font-size:13px; color:#6B1A2E; font-weight:500" @tap="goAllTheaters">全部城市 ›</text>
+        <text style="font-size:13px; color: #6957D0; font-weight:500" @tap="goAllTheaters">全部城市 ›</text>
       </view>
       <view style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; padding:0 16px">
         <view
@@ -67,9 +67,9 @@
           @tap="goCity(city)"
         >
           <view style="padding:12px 10px 10px; min-height:72px; position:relative; display:flex; flex-direction:column; justify-content:flex-end">
-            <text style="position:absolute; right:4px; top:-2px; font-size:44px; font-weight:900; color:rgba(255,255,255,0.12); line-height:1; pointer-events:none; user-select:none">{{ getCityStyle(city.id).char }}</text>
-            <text style="display:block; font-size:14px; font-weight:800; color:#fff; letter-spacing:0.5px">{{ city.name }}</text>
-            <text style="display:block; font-size:10px; color:rgba(255,255,255,0.6); margin-top:2px">{{ city.count }}个剧院</text>
+            <text style="position:absolute; right:4px; top:-2px; font-size:44px; font-weight:900; color:rgba(255, 255, 255, 0.12); line-height:1; pointer-events:none; user-select:none">{{ getCityStyle(city.id).char }}</text>
+            <text style="display:block; font-size:16px; font-weight:800; color: #ffffffcd; letter-spacing:0.5px">{{ city.name }}</text>
+            <text style="display:block; font-size:12px; color:rgba(37, 5, 88, 0.6); margin-top:2px">{{ city.count }}个剧院</text>
           </view>
         </view>
       </view>
@@ -88,7 +88,7 @@
       <!-- 热门剧院 -->
       <view style="padding:16px 16px 10px; display:flex; align-items:center; justify-content:space-between">
         <text style="font-size:15px; font-weight:800; color:#111">热门剧院</text>
-        <text style="font-size:13px; color:#6B1A2E; font-weight:500" @tap="goAllTheaters">查看全部 ›</text>
+        <text style="font-size:13px; color: #6957D0; font-weight:500" @tap="goAllTheaters">查看全部 ›</text>
       </view>
       <scroll-view scroll-x style="padding:0 16px 4px; white-space:nowrap">
         <view style="display:inline-flex; gap:10px">
@@ -115,15 +115,15 @@
     <!-- ══ 我的视野 tab ══ -->
     <view v-show="activeTab === 1">
       <!-- 顶部渐变 header -->
-      <view style="background:linear-gradient(160deg,#1A0A0F 0%,#3A0E1F 100%); padding:52px 20px 28px">
+      <view style="background:linear-gradient(160deg, #6b6ba4 0%, #1d122add 100%); padding:52px 20px 28px">
         <view style="display:flex; align-items:center; gap:16px; margin-bottom:20px">
           <view style="width:64px; height:64px; border-radius:50%; background:rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:32px">
             🎭
           </view>
           <view>
-            <text style="display:block; font-size:18px; font-weight:900; color:#fff; margin-bottom:4px">剧迷用户</text>
-            <view style="display:inline-flex; align-items:center; gap:4px; background:rgba(201,169,110,0.2); border:1px solid rgba(201,169,110,0.4); border-radius:20px; padding:2px 10px">
-              <text style="font-size:11px; color:#C9A96E; font-weight:600">{{ myLevel.icon }} {{ myLevel.name }}</text>
+            <text style="display:block; font-size:20px; font-weight:900; color:#fff; margin-bottom:4px">剧韭小A</text>
+            <view style="display:inline-flex; align-items:center; gap:4px; background:rgba(15, 7, 17, 0.66); border:1px solid rgba(154, 154, 96, 0.4); border-radius:20px; padding:2px 10px">
+              <text style="font-size:11px; color: #F3DCCB; font-weight:600">{{ myLevel.icon }} {{ myLevel.name }}</text>
             </view>
           </view>
         </view>
@@ -141,7 +141,7 @@
           <view style="width:1px; background:rgba(255,255,255,0.12)"></view>
           <view style="flex:1; display:flex; flex-direction:column; align-items:center; gap:2px">
             <text style="font-size:22px; font-weight:900; color:#fff">{{ reviewCount }}</text>
-            <text style="font-size:11px; color:rgba(255,255,255,0.5)">发布评价</text>
+            <text style="font-size:11px; color:rgba(255,255,255,0.5)">我的收藏</text>
           </view>
         </view>
       </view>
@@ -153,7 +153,7 @@
           style="flex:1; padding:13px 0; text-align:center"
           @click="profileSubTab = i"
         >
-          <text style="font-size:13px; font-weight:600" :style="{ color: profileSubTab === i ? '#6B1A2E' : '#9CA3AF' }">{{ t }}</text>
+          <text style="font-size:13px; font-weight:600" :style="{ color: profileSubTab === i ? '#2B263B' : '#9CA3AF' }">{{ t }}</text>
           <view v-if="profileSubTab === i" style="height:2px; background:#6B1A2E; border-radius:2px; margin:6px auto 0; width:24px"></view>
         </view>
       </view>
@@ -240,12 +240,12 @@ const myLevel = computed(() => {
 const keyword = ref('')
 
 const CITY_STYLE = {
-  beijing:   { gradient: 'linear-gradient(140deg, #1A2E6B, #2D56B0)', char: '京' },
-  shanghai:  { gradient: 'linear-gradient(140deg, #7B1A2E, #C43858)', char: '沪' },
-  guangzhou: { gradient: 'linear-gradient(140deg, #0D5A3C, #1A9060)', char: '穗' },
-  shenzhen:  { gradient: 'linear-gradient(140deg, #0D3D5C, #1A6590)', char: '深' },
-  hangzhou:  { gradient: 'linear-gradient(140deg, #1A4A2D, #2D7A4A)', char: '杭' },
-  suzhou:    { gradient: 'linear-gradient(140deg, #3D2A14, #6B4A28)', char: '苏' },
+  beijing:   { gradient: 'linear-gradient(140deg, #8d8dd1, #d9d9f7c8)', char: 'BJ' },
+  shanghai:  { gradient: 'linear-gradient(140deg, #8d8dd1, #d9d9f7c8)', char: 'SH' },
+  guangzhou: { gradient: 'linear-gradient(140deg, #8d8dd1, #d9d9f7c8)', char: 'GZ' },
+  shenzhen:  { gradient: 'linear-gradient(140deg, #8d8dd1, #d9d9f7c8)', char: 'SZ' },
+  hangzhou:  { gradient: 'linear-gradient(140deg, #8d8dd1, #d9d9f7c8)', char: 'HZ' },
+  suzhou:    { gradient: 'linear-gradient(140deg, #8d8dd1, #d9d9f7c8)', char: 'SZ' },
 }
 const FALLBACK = { gradient: 'linear-gradient(140deg, #3D3D3D, #6B6B6B)', char: '地' }
 function getCityStyle(id) { return CITY_STYLE[id] || FALLBACK }
