@@ -1,7 +1,7 @@
 <template>
   <view style="background: #F5F5F7; min-height: 100vh; padding-bottom: 88px">
     <!-- 顶部 -->
-    <view style="background: linear-gradient(160deg, #1A0A0F 0%, #3A0E1F 100%); padding: 48px 16px 14px">
+    <view style="background: linear-gradient(160deg, #2B263B 0%, #4b3e71d9 100%); padding: 48px 16px 14px">
       <view style="display:flex; align-items:center; gap:12px; margin-bottom:14px">
         <view
           style="width:32px; height:32px; border-radius:16px; background:rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; flex-shrink:0"

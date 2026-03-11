@@ -1,7 +1,7 @@
 <template>
-  <view class="min-h-screen bg-[#F9F5F0]">
+  <view class="min-h-screen bg-[ #F9F5F0]">
     <!-- 座位信息头 -->
-    <view class="bg-gradient-to-br from-[#1A0A0F] to-[#4A1225] px-4 pt-10 pb-5">
+    <view style="background: linear-gradient(160deg, #2B263B 0%, #4b3e71d9 100%)" class="px-4 pt-10 pb-5">
       <view class="flex items-center gap-3 mb-3">
         <view
           class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
@@ -16,7 +16,7 @@
           <text class="text-xs text-[#E8D5A8]">{{ theaterName }}</text>
         </view>
       </view>
-      <text class="block text-2xl font-black text-white mb-1">{{ sectionName }} · {{ rowLabel }} · {{ num }}号</text>
+      <text class="block text-lg font-black text-white mb-1">{{ sectionName }} · {{ rowLabel }} · {{ num }}号</text>
       <text class="block text-xs text-white/60 mb-3">点击座位后的实际视角</text>
       <view v-if="photos.length" class="flex gap-4">
         <view v-if="qCounts.full" class="flex items-center gap-1.5 text-xs text-white/80">
@@ -28,18 +28,6 @@
         <view v-if="qCounts.obstructed" class="flex items-center gap-1.5 text-xs text-white/80">
           <view class="w-2.5 h-2.5 rounded-full bg-red-500" />遮挡 {{ qCounts.obstructed }}
         </view>
-      </view>
-    </view>
-
-    <!-- 上传入口 -->
-    <view class="px-4 py-3">
-      <view class="flex items-center gap-3 bg-white rounded-2xl p-4 shadow-sm border-2 border-dashed border-[#6B1A2E]" @tap="showModal = true">
-        <text class="text-3xl">📸</text>
-        <view class="flex-1">
-          <text class="block text-sm font-bold text-[#6B1A2E]">上传你的座位视角</text>
-          <text class="block text-xs text-gray-400 mt-0.5">帮助其他剧迷了解这个位置</text>
-        </view>
-        <text class="text-xl text-[#6B1A2E]">›</text>
       </view>
     </view>
 
@@ -73,7 +61,7 @@
       <text class="text-8xl mb-4">🎭</text>
       <text class="text-base font-bold text-gray-800 mb-2 text-center">这个座位还没有视角图</text>
       <text class="text-sm text-gray-500 text-center leading-relaxed mb-6">成为第一个分享视角的剧迷，帮助大家做出更好的选座决定</text>
-      <view class="bg-[#6B1A2E] text-white rounded-full px-8 py-3 text-sm font-bold" @tap="showModal = true">
+      <view class="bg-[#6957D0] text-white rounded-full px-8 py-3 text-sm font-bold" @tap="showModal = true">
         📸 立即上传视角
       </view>
     </view>
@@ -149,7 +137,8 @@ import Taro, { useRouter } from '@tarojs/taro'
 import { uploadImage, saveSeatPhoto, fetchSeatPhotos } from '@/utils/upload'
 
 const router = useRouter()
-const { seatId, section, row, num, theater: theaterName, theaterId } = router.params
+const { seatId, section, row, num, theater, theaterId } = router.params
+const theaterName = decodeURIComponent(theater || '')
 const sectionName = decodeURIComponent(section || '')
 const rowLabel = decodeURIComponent(row || '')
 
